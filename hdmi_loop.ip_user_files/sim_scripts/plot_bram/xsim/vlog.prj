@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../ipcores/plot_bram/sim/plot_bram.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,2 @@
+rom_char.v,verilog,xil_defaultlib,../../../../ipcores/rom_char/sim/rom_char.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

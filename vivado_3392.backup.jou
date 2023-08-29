@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed May 29 14:57:17 2019
+# Process ID: 3392
+# Current directory: E:/project/AV7325/hdmi_loop
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11164 E:\project\AV7325\hdmi_loop\hdmi_loop.xpr
+# Log file: E:/project/AV7325/hdmi_loop/vivado.log
+# Journal file: E:/project/AV7325/hdmi_loop\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/project/AV7325/hdmi_loop/hdmi_loop.xpr
+update_compile_order -fileset sources_1

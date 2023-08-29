@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1692933340">
+  <File Type="PWROPT-DCP" Name="hdmi_loop_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="hdmi_loop_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="hdmi_loop.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="hdmi_loop_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hdmi_loop_reports.tcl"/>
+  <File Type="BG-DRC" Name="hdmi_loop.drc"/>
+  <File Type="OPT-DCP" Name="hdmi_loop_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="hdmi_loop.hwdef"/>
+  <File Type="OPT-DRC" Name="hdmi_loop_drc_opted.rpt"/>
+  <File Type="PLACE-DCP" Name="hdmi_loop_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hdmi_loop_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hdmi_loop_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hdmi_loop_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hdmi_loop_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hdmi_loop_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hdmi_loop_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="hdmi_loop_physopt.dcp"/>
+  <File Type="BG-BIT" Name="hdmi_loop.bit"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hdmi_loop_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hdmi_loop_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hdmi_loop_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hdmi_loop_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hdmi_loop_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="hdmi_loop.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="hdmi_loop_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="hdmi_loop.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_loop_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="hdmi_loop.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_loop_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="hdmi_loop.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_loop_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="hdmi_loop_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="hdmi_loop_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hdmi_loop_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hdmi_loop_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="hdmi_loop_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hdmi_loop_timing_summary_routed.rpx"/>
+  <File Type="RDI-RDI" Name="hdmi_loop.vdi"/>
+  <File Type="ROUTE-CLK" Name="hdmi_loop_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hdmi_loop_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hdmi_loop_postroute_physopt_bb.dcp"/>
+  <File Type="BITSTR-NKY" Name="hdmi_loop.nky"/>
+  <File Type="BITSTR-BMM" Name="hdmi_loop_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="hdmi_loop.mmi"/>
+  <File Type="BITSTR-LTX" Name="hdmi_loop.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="hdmi_loop.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/YCbCr2RGB.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/i2c_master/i2c_config.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/project/AX/AX7103/02_demo1/hdmi_out_test/src/i2c_master/i2c_config.v"/>
+        <Attr Name="ImportTime" Val="1490691626"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/i2c_master/timescale.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/project/AX/AX7103/02_demo1/hdmi_out_test/src/i2c_master/timescale.v"/>
+        <Attr Name="ImportTime" Val="1001334112"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/i2c_master/i2c_master_defines.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/project/AX/AX7103/02_demo1/hdmi_out_test/src/i2c_master/i2c_master_defines.v"/>
+        <Attr Name="ImportTime" Val="1004961566"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/i2c_master/i2c_master_bit_ctrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/project/AX/AX7103/02_demo1/hdmi_out_test/src/i2c_master/i2c_master_bit_ctrl.v"/>
+        <Attr Name="ImportTime" Val="1263314208"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/i2c_master/i2c_master_byte_ctrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/project/AX/AX7103/02_demo1/hdmi_out_test/src/i2c_master/i2c_master_byte_ctrl.v"/>
+        <Attr Name="ImportTime" Val="1232396966"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/i2c_master/i2c_master_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Z:/project/AX/AX7103/02_demo1/hdmi_out_test/src/i2c_master/i2c_master_top.v"/>
+        <Attr Name="ImportTime" Val="1472299252"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/lut_adv7619.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/overlay.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/plot.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/reset_power_on.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/scale_point.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/simu_point.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/timing_gen_xy.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_rs.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_rx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_tx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/edid/SyncAsync.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/edid/GlitchFilter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/edid/TWI_SlaveCtl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/edid/EEPROM_8b.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/hdmi_loop.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/imports/src/hdmi_loop.v"/>
+        <Attr Name="ImportTime" Val="1493202219"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/lut_sil9136.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/ppi.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/sin_cos.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/char.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/charr.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/icon.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/tan.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/bg_angle.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/load_file/display_a_data.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hdmi_loop"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/hdmi_loop.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/constrs_1/new/hdmi_loop.xdc"/>
+        <Attr Name="ImportTime" Val="1493197379"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/hdmi_loop.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="sys_pll"/>
+  <BlockFileSet Type="BlockSrcs" Name="bram_display_b"/>
+  <BlockFileSet Type="BlockSrcs" Name="rom_theta_data"/>
+  <BlockFileSet Type="BlockSrcs" Name="icon_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="plot_bram"/>
+  <BlockFileSet Type="BlockSrcs" Name="rom_char"/>
+  <BlockFileSet Type="BlockSrcs" Name="bram_display_a"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+</GenRun>

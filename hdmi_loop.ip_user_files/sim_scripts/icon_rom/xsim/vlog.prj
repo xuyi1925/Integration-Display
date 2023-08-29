@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../ipcores/icon_rom/sim/icon_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

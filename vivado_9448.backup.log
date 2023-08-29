@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Nov  1 15:52:02 2018
+# Process ID: 9448
+# Current directory: F:/project/AV7325/hdmi_loop
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14720 F:\project\AV7325\hdmi_loop\hdmi_loop.xpr
+# Log file: F:/project/AV7325/hdmi_loop/vivado.log
+# Journal file: F:/project/AV7325/hdmi_loop\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/project/AV7325/hdmi_loop/hdmi_loop.xpr
+INFO: [Project 1-313] Project file moved from 'F:/AV7325/hdmi_loop' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 757.672 ; gain = 37.766
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  1 16:00:17 2018...

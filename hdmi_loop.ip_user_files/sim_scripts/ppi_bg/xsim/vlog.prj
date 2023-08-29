@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../ipcores/ppi_bg/sim/ppi_bg.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

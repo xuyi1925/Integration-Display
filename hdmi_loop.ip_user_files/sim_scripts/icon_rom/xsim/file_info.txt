@@ -1,0 +1,2 @@
+icon_rom.v,verilog,xil_defaultlib,../../../../ipcores/icon_rom/sim/icon_rom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

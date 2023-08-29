@@ -1,0 +1,663 @@
+/*
+
+Vivado v2015.4 (64-bit)
+SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+Process ID: 7840
+
+Current time: 	12/20/17 3:35:33 PM CST
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=SimSun,name=ËÎÌו,style=plain,size=12
+
+Java version: 	1.8.0_45 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.4/tps/win64/jre
+
+User name: 	Mei
+User home directory: C:/Users/Mei
+User working directory: D:/ax7350/hdmi_loop
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+Vivado preferences path: C:/Users/Mei/AppData/Roaming/Xilinx/Vivado/2015.4/vivado.ini
+Vivado layouts directory: C:/Users/Mei/AppData/Roaming/Xilinx/Vivado/2015.4/layouts
+
+GUI allocated memory:	174 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 496 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\ax7350\hdmi_loop\hdmi_loop.xpr. Version: Vivado v2015.4 
+// bF:g (cq:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: open_project D:/ax7350/hdmi_loop/hdmi_loop.xpr 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 39 MB (+38272kb) [00:00:05]
+// [Engine Memory]: 393 MB (+260672kb) [00:00:05]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 44 MB (+3263kb) [00:00:06]
+// [Engine Memory]: 456 MB (+45238kb) [00:00:06]
+// [GUI Memory]: 49 MB (+2908kb) [00:00:07]
+// [Engine Memory]: 489 MB (+10430kb) [00:00:07]
+// [GUI Memory]: 60 MB (+8647kb) [00:00:07]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project D:/ax7350/hdmi_loop/hdmi_loop.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'Z:/project/AX/AX7103/02_demo1/hdmi_loop' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 503 MB. GUI used memory: 38 MB. Current time: 12/20/17 3:35:33 PM CST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: hdmi_loop; location: D:/ax7350/hdmi_loop; part: xc7a100tfgg484-2
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 770.809 ; gain = 153.781 
+dismissDialog("Open Project"); // bF:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 515 MB (+2170kb) [00:00:12]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hdmi_loop (hdmi_loop.v)]", 3); // y:k (I:JPanel, cq:JFrame)
+// [GUI Memory]: 63 MB (+616kb) [00:00:18]
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, hdmi_loop.xdc]", 8, false); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, hdmi_loop.xdc]", 8, false, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 523 MB. GUI used memory: 40 MB. Current time: 12/20/17 3:35:58 PM CST
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Project Settings]", 1, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SETTINGS
+// Project Settings: addNotify
+selectButton(PAResourceOtoP.ProjectSettingsGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // r:a (a:z, k:aJ)
+// [GUI Memory]: 67 MB (+337kb) [00:00:44]
+// c:c (k:aJ): Select Device: addNotify
+// [GUI Memory]: 72 MB (+1897kb) [00:00:45]
+selectComboBox(PAResourceOtoP.PartChooser_FAMILY_CHOOSER, "Zynq-7000", 13); // ai:M (JPanel:JComponent, c:c)
+selectComboBox(PAResourceOtoP.PartChooser_PART_PACKAGE_CHOOSER, "ffg676", 9); // aa:M (JPanel:JComponent, c:c)
+selectTable(PAResourceOtoP.PartChooser_PARTS, "xc7z035ffg676-2 ; 676 ; 500 ; 900 ; 343800 ; 0 ; 8 ; 8 ; 250 ; 171900 ; 8 ; 1 ; 85 ; 0 ; 85 ; C ; 1.03 ; 0.97 ; 0.97", 5, "xc7z035ffg676-2", 0); // N:v (JViewport:JComponent, c:c)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, c:c)
+dismissDialog("Select Device"); // c:c (k:aJ)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aJ)
+// G:aY (cq:JFrame): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_NO, "No"); // a:JButton (JPanel:JComponent, G:aY)
+// TclEventType: RUN_MODIFY
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PART_MODIFIED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property part xc7z035ffg676-2 [current_project] 
+dismissDialog("Create New Run"); // G:aY (cq:JFrame)
+dismissDialog("Project Settings"); // k:aJ (cq:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 77 MB (+1096kb) [00:01:00]
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORT, "Report"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_REPORT_IP_STATUS, "Report IP Status"); // ae:JMenuItem (JPopupMenu:JComponent, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// TclEventType: IP_SUMMARY_RESULTS
+// bF:g (cq:JFrame):  Report IP Status : addNotify
+// Tcl Message: report_ip_status -name ip_status  
+dismissDialog("Report IP Status"); // bF:g (cq:JFrame)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a:JButton (JPanel:JComponent, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// ai:G (cq:JFrame): Enable Core Container: addNotify
+selectRadioButton((HResource) null, "Convert IP to Core Container and Set as Default in Project"); // a:JRadioButton (JPanel:JComponent, ai:G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ai:G)
+dismissDialog("Enable Core Container"); // ai:G (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// Tcl Message: upgrade_ip -srcset sys_pll -vlnv xilinx.com:ip:clk_wiz:5.2 [get_ips  sys_pll] 
+// Tcl Message: Upgrading 'sys_pll' 
+// TclEventType: RUN_DELETE
+// bF:g (cq:JFrame):  Upgrade IP : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Project 1-386] Moving file 'D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll/sys_pll.xci' from fileset 'sys_pll' to fileset 'sources_1'. 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// [GUI Memory]: 81 MB (+725kb) [00:01:09]
+// [Engine Memory]: 542 MB (+755kb) [00:01:09]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated sys_pll to use current project options INFO: [IP_Flow 19-3471] Wrote upgrade log to 'd:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll/sys_pll.upgrade_log'. INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'sys_pll'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: convert_ips [get_files  D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll/sys_pll.xci] 
+// Tcl Message: INFO: [filemgmt 56-106] Converting IP 'sys_pll' into core container format. INFO: [filemgmt 56-101] Creating core container 'D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll.xcix' for IP 'sys_pll' 
+// Tcl Message: export_ip_user_files -of_objects  [get_files  D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll/sys_pll.xci] -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property coreContainer.enable 1 [current_project] 
+// al:y (cq:JFrame): Enable Core Container: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceTtoZ.UpgradeIP_OK, "OK"); // a:JButton (JPanel:JComponent, al:y)
+dismissDialog("Enable Core Container"); // al:y (cq:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 555 MB. GUI used memory: 45 MB. Current time: 12/20/17 3:36:38 PM CST
+// aB:x (cq:JFrame): Generate Output Products: addNotify
+selectButton("PAResourceTtoZ.UpgradeIP_IP_UPGRADE_COMPLETED_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, aB:x)
+// bF:g (cq:JFrame):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll/sys_pll.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sys_pll'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sys_pll'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'sys_pll'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'sys_pll'... 
+// Tcl Message: export_ip_user_files -of_objects [get_files D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll/sys_pll.xci] -no_script -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll/sys_pll.xci] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: launch_run -jobs 4 sys_pll_synth_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// [Engine Memory]: 577 MB (+8336kb) [00:01:19]
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 20 15:36:46 2017] Launched sys_pll_synth_1... Run output will be captured here: D:/ax7350/hdmi_loop/hdmi_loop.runs/sys_pll_synth_1/runme.log 
+// Tcl Message: export_simulation -of_objects [get_files D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll/sys_pll.xci] -directory D:/ax7350/hdmi_loop/hdmi_loop.ip_user_files/sim_scripts -force -quiet 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 11 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // i:l (JPanel:JComponent, cq:JFrame)
+// TclEventType: IP_SUMMARY_RESULTS
+// bF:g (cq:JFrame):  Report IP Status : addNotify
+// Tcl Message: report_ip_status -name ip_status  
+dismissDialog("Report IP Status"); // bF:g (cq:JFrame)
+selectCodeEditor("hdmi_loop.xdc", 265, 306); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 621 MB (+16430kb) [00:02:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 623 MB. GUI used memory: 54 MB. Current time: 12/20/17 3:37:38 PM CST
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 85 MB (+178kb) [00:07:47]
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 545 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // i:l (JPanel:JComponent, cq:JFrame)
+// [GUI Memory]: 90 MB (+570kb) [00:10:54]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 95 MB (+405kb) [00:23:17]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 624 MB. GUI used memory: 55 MB. Current time: 12/20/17 4:07:38 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 100 MB (+150kb) [00:37:04]
+// Elapsed time: 1587 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hdmi_loop (hdmi_loop.v)]", 3, true); // y:k (I:JPanel, cq:JFrame) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cq:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (H:JPanel, b:g)
+// Elapsed time: 12 seconds
+setFileChooser("D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/reset_power_on.v");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (H:JPanel, b:g)
+String[] filenames31467 = {"D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/EEPROM_8b.vhd", "D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd"};
+setFileChooser(filenames31467);
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (H:JPanel, b:g)
+// Elapsed time: 10 seconds
+dismissFileChooser();
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'g' command handler elapsed time: 42 seconds
+dismissDialog("Add Sources"); // b:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/reset_power_on.v D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/EEPROM_8b.vhd} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("hdmi_loop.xdc", 275, 346); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 81 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // i:l (JPanel:JComponent, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hdmi_loop (hdmi_loop.v)]", 3, true); // y:k (I:JPanel, cq:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hdmi_loop (hdmi_loop.v)]", 3, true, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click - Node
+selectCodeEditor("hdmi_loop.v", 273, 163); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("hdmi_loop.v", 273, 163, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "hdmi_loop.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("hdmi_loop.v", 280, 183); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("hdmi_loop.v", 280, 183, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+typeControlKey((HResource) null, "hdmi_loop.v", 'c'); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 115 seconds
+selectCodeEditor("hdmi_loop.v", 184, 421); // bl:J (JPanel:JComponent, cq:JFrame)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // i:l (JPanel:JComponent, cq:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 20 16:16:52 2017] Launched synth_1... Run output will be captured here: D:/ax7350/hdmi_loop/hdmi_loop.runs/synth_1/runme.log [Wed Dec 20 16:16:52 2017] Launched impl_1... Run output will be captured here: D:/ax7350/hdmi_loop/hdmi_loop.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bF:g (cq:JFrame)
+selectCodeEditor("hdmi_loop.v", 210, 489); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: RUN_FAILED
+// X:G (cq:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 85 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // X:G (cq:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2396] near character '1' ; 3 visible types match here [D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd:107]. ]", 2, true); // ag:k (JViewport:JComponent, cq:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\ax7350\hdmi_loop\hdmi_loop.srcs\sources_1\edid\TWI_SlaveCtl.vhd;-;;-;16;-;line;-;107;-;;-;16;-;"); // ag:k (JViewport:JComponent, cq:JFrame)
+// Elapsed time: 13 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2396] near character '1' ; 3 visible types match here [D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd:107]. ]", 2); // ag:k (JViewport:JComponent, cq:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2396] near character '1' ; 3 visible types match here [D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd:107]. , [Synth 8-2396] near character '0' ; 3 visible types match here [D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd:110]. ]", 3, false); // ag:k (JViewport:JComponent, cq:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\ax7350\hdmi_loop\hdmi_loop.srcs\sources_1\edid\TWI_SlaveCtl.vhd;-;;-;16;-;line;-;110;-;;-;16;-;"); // ag:k (JViewport:JComponent, cq:JFrame)
+// Elapsed time: 12 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2396] near character '1' ; 3 visible types match here [D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd:107]. , [Synth 8-2396] near character '0' ; 3 visible types match here [D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd:119]. ]", 5, false); // ag:k (JViewport:JComponent, cq:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\ax7350\hdmi_loop\hdmi_loop.srcs\sources_1\edid\TWI_SlaveCtl.vhd;-;;-;16;-;line;-;119;-;;-;16;-;"); // ag:k (JViewport:JComponent, cq:JFrame)
+// Elapsed time: 86 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 20 16:20:16 2017] Launched synth_1... Run output will be captured here: D:/ax7350/hdmi_loop/hdmi_loop.runs/synth_1/runme.log [Wed Dec 20 16:20:16 2017] Launched impl_1... Run output will be captured here: D:/ax7350/hdmi_loop/hdmi_loop.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bF:g (cq:JFrame)
+selectCodeEditor("TWI_SlaveCtl.vhd", 281, 319); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: RUN_FAILED
+// X:G (cq:JFrame): Synthesis Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // X:G (cq:JFrame)
+// [GUI Memory]: 106 MB (+1105kb) [00:45:06]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2396] near character '1' ; 3 visible types match here [D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd:107]. ]", 2, true); // ag:k (JViewport:JComponent, cq:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\ax7350\hdmi_loop\hdmi_loop.srcs\sources_1\edid\TWI_SlaveCtl.vhd;-;;-;16;-;line;-;107;-;;-;16;-;"); // ag:k (JViewport:JComponent, cq:JFrame)
+selectCodeEditor("TWI_SlaveCtl.vhd", 327, 294); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hdmi_loop (hdmi_loop.v), EEPROM_8b_m0 - EEPROM_8b - Behavioral (EEPROM_8b.vhd), I2C_SlaveController - TWI_SlaveCtl - Behavioral (TWI_SlaveCtl.vhd)]", 8); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hdmi_loop (hdmi_loop.v), EEPROM_8b_m0 - EEPROM_8b - Behavioral (EEPROM_8b.vhd), I2C_SlaveController - TWI_SlaveCtl - Behavioral (TWI_SlaveCtl.vhd), SyncSDA - SyncAsync]", 9, false); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hdmi_loop (hdmi_loop.v), EEPROM_8b_m0 - EEPROM_8b - Behavioral (EEPROM_8b.vhd), I2C_SlaveController - TWI_SlaveCtl - Behavioral (TWI_SlaveCtl.vhd), SyncSDA - SyncAsync]", 9, false, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click
+selectCodeEditor("TWI_SlaveCtl.vhd", 219, 316); // bl:J (JPanel:JComponent, cq:JFrame)
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cq:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (H:JPanel, b:g)
+String[] filenames16706 = {"D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/GlitchFilter.vhd", "D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/SyncAsync.vhd"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'g' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // b:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/SyncAsync.vhd D:/ax7350/hdmi_loop/hdmi_loop.srcs/sources_1/edid/GlitchFilter.vhd} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 649 MB. GUI used memory: 61 MB. Current time: 12/20/17 4:21:58 PM CST
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 20 16:21:58 2017] Launched synth_1... Run output will be captured here: D:/ax7350/hdmi_loop/hdmi_loop.runs/synth_1/runme.log [Wed Dec 20 16:21:58 2017] Launched impl_1... Run output will be captured here: D:/ax7350/hdmi_loop/hdmi_loop.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bF:g (cq:JFrame)
+selectCodeEditor("TWI_SlaveCtl.vhd", 234, 327); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 156 seconds
+selectCodeEditor("TWI_SlaveCtl.vhd", 804, 229); // bl:J (JPanel:JComponent, cq:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.. ]", 2, false); // ag:k (JViewport:JComponent, cq:JFrame)
+selectCodeEditor("TWI_SlaveCtl.vhd", 256, 473); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: RUN_COMPLETED
+// X:G (cq:JFrame): Bitstream Generation Completed: addNotify
+// [Engine Memory]: 653 MB (+395kb) [00:50:14]
+// Elapsed time: 101 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, X:G)
+dismissDialog("Bitstream Generation Completed"); // X:G (cq:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 672 MB. GUI used memory: 60 MB. Current time: 12/20/17 4:29:23 PM CST
+// Elapsed time: 506 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 26, true); // w:Y (v:I, cq:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bF:g (cq:JFrame):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2015.4   **** Build date : Nov 17 2015-18:01:07     ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.   
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+dismissDialog("Auto Connect"); // bF:g (cq:JFrame)
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+// [Engine Memory]: 685 MB (+27kb) [00:59:44]
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+// Elapsed time: 13 seconds
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 
+selectButton(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Hardware_auto_connect_target"); // y:JideButton (CommandBar:DockableBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-26] No hardware targets exist on the server [localhost] Check to make sure the cable targets connected to this machine are properly connected and powered up, then use the disconnect_hw_server and connect_hw_server commands to re-register the hardware targets. 

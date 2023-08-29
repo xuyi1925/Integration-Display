@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Aug 28 10:52:50 2023
+# Process ID: 9708
+# Current directory: F:/08_4_hdmi_loop
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29176 F:\08_4_hdmi_loop\hdmi_loop.xpr
+# Log file: F:/08_4_hdmi_loop/vivado.log
+# Journal file: F:/08_4_hdmi_loop\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/08_4_hdmi_loop/hdmi_loop.xpr
+INFO: [Project 1-313] Project file moved from 'D:/FPGA display/08_4_hdmi_loop' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 918.293 ; gain = 182.508
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210512180081.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+set_property PROBES.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.ltx} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1515.480 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"plot_m1/scale_p/scale_inst"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file F:/08_4_hdmi_loop/hdmi_loop.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"plot_m1/scale_p/scale_inst"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2023-Aug-28 10:54:41
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"plot_m1/scale_p/scale_inst"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"plot_m1/scale_p/scale_inst"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2023-Aug-28 10:54:41
+INFO: [Labtools 27-3304] ILA Waveform data saved to file F:/08_4_hdmi_loop/hdmi_loop.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"plot_m1/scale_p/scale_inst"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2023-Aug-28 10:56:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"plot_m1/scale_p/scale_inst"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"plot_m1/scale_p/scale_inst"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2023-Aug-28 10:56:54
+INFO: [Labtools 27-3304] ILA Waveform data saved to file F:/08_4_hdmi_loop/hdmi_loop.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'plot_m1/scale_p/scale_inst' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.ltx} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {F:/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1550.242 ; gain = 0.176
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"plot_m1/scale_p/scale_inst"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file F:/08_4_hdmi_loop/hdmi_loop.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+close_hw

@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../ipcores/rom_theta_data/sim/rom_theta_data.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
