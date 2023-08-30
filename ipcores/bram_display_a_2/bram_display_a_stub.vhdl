@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Sun Jun 25 14:50:43 2023
--- Host        : DESKTOP-QJAPJ31 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub {C:/Users/xuyi/Desktop/FPGA
---               display/08_4_hdmi_loop/ipcores/bram_display_a_2/bram_display_a_stub.vhdl}
+-- Date        : Wed Aug 30 10:47:57 2023
+-- Host        : DESKTOP-IDDFDEU running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_a_2/bram_display_a_stub.vhdl
 -- Design      : bram_display_a
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg900-2

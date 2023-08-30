@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1692933340">
+<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1693387145">
   <File Type="PA-TCL" Name="hdmi_loop.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="hdmi_loop_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="hdmi_loop_reports.tcl"/>
   <File Type="RDS-RDS" Name="hdmi_loop.vds"/>
   <File Type="RDS-UTIL" Name="hdmi_loop_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="hdmi_loop_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="hdmi_loop.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hdmi_loop_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="hdmi_loop_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/YCbCr2RGB.v">
@@ -255,7 +258,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="sys_pll"/>

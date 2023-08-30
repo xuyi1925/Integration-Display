@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1692933340">
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1693387145">
   <File Type="PWROPT-DCP" Name="hdmi_loop_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="hdmi_loop_power_routed.rpt"/>
   <File Type="PA-TCL" Name="hdmi_loop.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="hdmi_loop_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="hdmi_loop_reports.tcl"/>
   <File Type="BG-DRC" Name="hdmi_loop.drc"/>
-  <File Type="OPT-DCP" Name="hdmi_loop_opt.dcp"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hdmi_loop_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="hdmi_loop_timing_summary_init.rpt"/>
   <File Type="OPT-HWDEF" Name="hdmi_loop.hwdef"/>
+  <File Type="OPT-DCP" Name="hdmi_loop_opt.dcp"/>
   <File Type="OPT-DRC" Name="hdmi_loop_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="hdmi_loop_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="hdmi_loop_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="hdmi_loop_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="hdmi_loop_placed.dcp"/>
   <File Type="PLACE-IO" Name="hdmi_loop_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="hdmi_loop_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="hdmi_loop_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="hdmi_loop_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="hdmi_loop_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="hdmi_loop_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="hdmi_loop_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="hdmi_loop_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="hdmi_loop_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="hdmi_loop_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="hdmi_loop_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="hdmi_loop_drc_physopted.rpt"/>
   <File Type="BG-BIT" Name="hdmi_loop.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="hdmi_loop_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="hdmi_loop_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="hdmi_loop_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="hdmi_loop_routed_bb.dcp"/>
@@ -37,13 +48,18 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="hdmi_loop_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="hdmi_loop_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="hdmi_loop_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="hdmi_loop_incremental_reuse_routed.rpt"/>
   <File Type="RDI-RDI" Name="hdmi_loop.vdi"/>
   <File Type="ROUTE-CLK" Name="hdmi_loop_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="hdmi_loop_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hdmi_loop_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hdmi_loop_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hdmi_loop_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hdmi_loop_timing_summary_postroute_physopted.rpx"/>
   <File Type="BITSTR-NKY" Name="hdmi_loop.nky"/>
   <File Type="BITSTR-BMM" Name="hdmi_loop_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="hdmi_loop.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="hdmi_loop.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="hdmi_loop.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
@@ -296,10 +312,12 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
-    <Step Id="power_opt_design"/>
+    <Step Id="power_opt_design" EnableStepBool="1"/>
     <Step Id="place_design"/>
     <Step Id="post_place_power_opt_design"/>
     <Step Id="phys_opt_design"/>

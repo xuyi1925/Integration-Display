@@ -132,6 +132,9 @@ wire[7:0]                               color_g;
 wire[7:0]                               color_b;
 reg                                     color_state = 1'b0;
 
+wire[19:0]								win_pos_x;
+wire[19:0]								win_pos_y;
+
 assign vs_edge = vin1_vs & ~vin1_vs_d0; 
 
 assign color_y = vin1_data_d2[23:16];
@@ -317,7 +320,9 @@ plot plot_m1(
     .object_id                  (object_id                ),
     .o_data                     (ori_data                 ),
     .signal                     (signal                   ),
-    .value                      (value                    )
+    .value                      (value                    ),
+	.out_win_pos_x				(win_pos_x				  ),
+	.out_win_pos_y				(win_pos_y				  )
 );
 
 overlay overlay_m1(

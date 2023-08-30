@@ -16,81 +16,84 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7k325tffg900-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.cache/wt} [current_project]
-set_property parent.project_path {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.cache/wt [current_project]
+set_property parent.project_path C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_cache_permissions disable [current_project]
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/ppi.coe}}
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/sin_cos.coe}}
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/char.coe}}
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/charr.coe}}
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/0.coe}}
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/icon.coe}}
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/tan.coe}}
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/bg_angle.coe}}
-add_files {{D:/FPGA display/08_4_hdmi_loop/load_file/display_a_data.coe}}
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/ppi.coe
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/sin_cos.coe
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/char.coe
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/charr.coe
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/0.coe
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/icon.coe
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/tan.coe
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/bg_angle.coe
+add_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/load_file/display_a_data.coe
 read_verilog -library xil_defaultlib {
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/YCbCr2RGB.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_config.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/timescale.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_master_defines.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_master_bit_ctrl.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_master_byte_ctrl.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_master_top.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/lut_adv7619.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/overlay.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/plot.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/reset_power_on.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/scale_point.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/simu_point.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/timing_gen_xy.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_rs.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_rx.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_tx.v}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/hdmi_loop.v}
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/YCbCr2RGB.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_config.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/timescale.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_master_defines.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_master_bit_ctrl.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_master_byte_ctrl.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/i2c_master/i2c_master_top.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/lut_adv7619.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/overlay.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/plot.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/reset_power_on.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/scale_point.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/simu_point.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/timing_gen_xy.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_rs.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_rx.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_tx.v
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/hdmi_loop.v
 }
 read_vhdl -library xil_defaultlib {
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/edid/SyncAsync.vhd}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/edid/GlitchFilter.vhd}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd}
-  {D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/edid/EEPROM_8b.vhd}
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/edid/SyncAsync.vhd
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/edid/GlitchFilter.vhd
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/edid/TWI_SlaveCtl.vhd
+  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/edid/EEPROM_8b.vhd
 }
-read_ip -quiet {{D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll.xci}}
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll.xdc}}]
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll.xci
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll_ooc.xdc]
 
-read_ip -quiet {{D:/FPGA display/08_4_hdmi_loop/ipcores/plot_bram/plot_bram.xci}}
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/ipcores/plot_bram/plot_bram_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/plot_bram/plot_bram.xci
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/plot_bram/plot_bram_ooc.xdc]
 
-read_ip -quiet {{D:/FPGA display/08_4_hdmi_loop/ipcores/rom_char/rom_char.xci}}
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/ipcores/rom_char/rom_char_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_char/rom_char.xci
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_char/rom_char_ooc.xdc]
 
-read_ip -quiet {{D:/FPGA display/08_4_hdmi_loop/ipcores/icon_rom/icon_rom.xci}}
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/ipcores/icon_rom/icon_rom_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/icon_rom/icon_rom.xci
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/icon_rom/icon_rom_ooc.xdc]
 
-read_ip -quiet {{D:/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data.xci}}
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data.xci
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_ooc.xdc]
 
-read_ip -quiet {{D:/FPGA display/08_4_hdmi_loop/ipcores/bram_display_a_2/bram_display_a.xci}}
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/ipcores/bram_display_a_2/bram_display_a_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_a_2/bram_display_a.xci
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_a_2/bram_display_a_ooc.xdc]
 
-read_ip -quiet {{D:/FPGA display/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b.xci}}
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b.xci
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b_ooc.xdc]
 
-read_ip -quiet {{D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_0.xci}}
-set_property used_in_synthesis false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc}}]
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc}}]
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc}}]
-set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_0.xci
+set_property used_in_synthesis false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -100,8 +103,8 @@ set_property used_in_implementation false [get_files -all {{d:/FPGA display/08_4
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc}}
-set_property used_in_implementation false [get_files {{D:/FPGA display/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc}}]
+read_xdc C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc
+set_property used_in_implementation false [get_files C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc]
 
 
 synth_design -top hdmi_loop -part xc7k325tffg900-2

@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Fri Aug 25 11:26:37 2023
-| Host         : DESKTOP-C8MV2TP running 64-bit major release  (build 9200)
+| Date         : Wed Aug 30 17:28:14 2023
+| Host         : DESKTOP-IDDFDEU running 64-bit major release  (build 9200)
 | Command      : report_drc -file hdmi_loop_drc_routed.rpt -pb hdmi_loop_drc_routed.pb -rpx hdmi_loop_drc_routed.rpx
 | Design       : hdmi_loop
 | Device       : xc7k325tffg900-2
@@ -24,15 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 84
+             Violations found: 86
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | CHECK-3   | Warning  | Report rule limit reached                           | 2          |
 | DPIP-1    | Warning  | Input pipelining                                    | 8          |
-| DPOP-1    | Warning  | PREG Output pipelining                              | 4          |
-| DPOP-2    | Warning  | MREG Output pipelining                              | 1          |
+| DPOP-1    | Warning  | PREG Output pipelining                              | 5          |
+| DPOP-2    | Warning  | MREG Output pipelining                              | 2          |
 | PDRC-153  | Warning  | Gated clock check                                   | 24         |
 | REQP-1839 | Warning  | RAMB36 async control check                          | 20         |
 | REQP-1840 | Warning  | RAMB18 async control check                          | 20         |
@@ -78,12 +78,12 @@ Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP plot_m1/addrb1 input plot_m1/addrb1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP plot_m1/addrb1 input plot_m1/addrb1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP plot_m1/addrb2 input plot_m1/addrb2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP plot_m1/addrb1 input plot_m1/addrb1/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
@@ -123,132 +123,142 @@ Related violations: <none>
 
 DPOP-1#4 Warning
 PREG Output pipelining  
+DSP plot_m1/addrb1 output plot_m1/addrb1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#5 Warning
+PREG Output pipelining  
 DSP plot_m1/distance_sq output plot_m1/distance_sq/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning
+MREG Output pipelining  
+DSP plot_m1/addrb1 multiplier stage plot_m1/addrb1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
 MREG Output pipelining  
 DSP plot_m1/distance_sq multiplier stage plot_m1/distance_sq/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][0]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][0]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][0]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][0]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][10]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][10]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][10]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][10]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][11]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][11]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][11]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][11]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][1]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][1]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][1]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][1]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][2]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][2]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][2]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][2]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][3]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][3]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][3]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][3]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][4]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][4]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][4]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][4]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][5]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][5]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][5]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][5]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][6]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][6]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][6]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][6]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][7]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][7]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][7]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][7]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][8]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][8]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][8]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][8]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/x_reg[0][9]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][9]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/x_reg[0][9]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][9]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][0]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][0]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][0]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][0]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][10]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][10]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][10]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][10]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][11]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][11]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][11]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][11]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][1]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][1]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][1]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][1]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#17 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][2]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][2]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][2]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][2]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#18 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][3]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][3]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][3]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][3]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#19 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][4]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][4]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][4]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][4]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#20 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][5]_P_1 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][5]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][5]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][5]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#21 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][6]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][6]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][6]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][6]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#22 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][7]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][7]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][7]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][7]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#23 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][8]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][8]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][8]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][8]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#24 Warning
 Gated clock check  
-Net plot_m1/scale_p/simu_p/y_reg[0][9]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][9]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reset_power_on_m0/y_reg[0][9]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][9]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-1839#1 Warning
@@ -333,22 +343,22 @@ Related violations: <none>
 
 REQP-1839#17 Warning
 RAMB36 async control check  
-The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[15] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[15]) which is driven by a register (timing_gen_xy_m1/x_cnt_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[12] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[12]) which is driven by a register (plot_m1/addrb_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#18 Warning
 RAMB36 async control check  
-The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[15] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[15]) which is driven by a register (timing_gen_xy_m1/x_cnt_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[13] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[13]) which is driven by a register (plot_m1/addrb_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#19 Warning
 RAMB36 async control check  
-The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[15] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[15]) which is driven by a register (timing_gen_xy_m1/y_cnt_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[14] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[14]) which is driven by a register (plot_m1/addrb_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#20 Warning
 RAMB36 async control check  
-The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[15] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[15]) which is driven by a register (timing_gen_xy_m1/y_cnt_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[15] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[15]) which is driven by a register (plot_m1/addrb_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#1 Warning

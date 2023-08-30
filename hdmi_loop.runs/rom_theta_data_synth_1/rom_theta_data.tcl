@@ -16,8 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7k325tffg900-2
@@ -26,14 +24,14 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/hdmi_loop.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/hdmi_loop.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.cache/wt [current_project]
+set_property parent.project_path C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_cache_permissions disable [current_project]
-read_ip -quiet {{c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_ooc.xdc}}]
+read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data.xci
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -56,44 +54,44 @@ write_checkpoint -force -noxdef rom_theta_data.dcp
 create_report "rom_theta_data_synth_1_synth_report_utilization_0" "report_utilization -file rom_theta_data_utilization_synth.rpt -pb rom_theta_data_utilization_synth.pb"
 
 if { [catch {
-  file copy -force {C:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/hdmi_loop.runs/rom_theta_data_synth_1/rom_theta_data.dcp} {c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data.dcp}
+  file copy -force C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/rom_theta_data_synth_1/rom_theta_data.dcp C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub {c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_stub.v}
+  write_verilog -force -mode synth_stub C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub {c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_stub.vhdl}
+  write_vhdl -force -mode synth_stub C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim {c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_sim_netlist.v}
+  write_verilog -force -mode funcsim C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim {c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_sim_netlist.vhdl}
+  write_vhdl -force -mode funcsim C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
-if {[file isdir {C:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/hdmi_loop.ip_user_files/ip/rom_theta_data}]} {
+if {[file isdir C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.ip_user_files/ip/rom_theta_data]} {
   catch { 
-    file copy -force {{c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_stub.v}} {C:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/hdmi_loop.ip_user_files/ip/rom_theta_data}
+    file copy -force C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_stub.v C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.ip_user_files/ip/rom_theta_data
   }
 }
 
-if {[file isdir {C:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/hdmi_loop.ip_user_files/ip/rom_theta_data}]} {
+if {[file isdir C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.ip_user_files/ip/rom_theta_data]} {
   catch { 
-    file copy -force {{c:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_stub.vhdl}} {C:/Users/xuyi/Desktop/FPGA display/08_4_hdmi_loop/hdmi_loop.ip_user_files/ip/rom_theta_data}
+    file copy -force C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data_stub.vhdl C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.ip_user_files/ip/rom_theta_data
   }
 }

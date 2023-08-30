@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="rom_theta_data_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1683453681">
+<GenRun Id="rom_theta_data_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1693363551">
   <File Type="PA-TCL" Name="rom_theta_data.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="rom_theta_data_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="rom_theta_data_reports.tcl"/>
   <File Type="RDS-RDS" Name="rom_theta_data.vds"/>
   <File Type="RDS-UTIL" Name="rom_theta_data_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="rom_theta_data_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="rom_theta_data.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="rom_theta_data_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="rom_theta_data_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/rom_theta_data">
     <File Path="$PPRDIR/ipcores/rom_theta_data/rom_theta_data.xci">
       <FileInfo>

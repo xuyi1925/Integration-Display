@@ -40,22 +40,26 @@ module plot(
     output[3:0]         object_id,
     output[23:0]        o_data,
     input[7:0]          signal,
-    input[31:0]         value
+    input[31:0]         value,
+    output[19:0]        out_win_pos_x,
+    output[19:0]        out_win_pos_y
 );
-parameter                               WIN_POS_X          =    19'd640;       // position of sub_window
-parameter                               WIN_POS_Y          =    19'd480;    
 parameter                               SUB_WINDOW_WIDTH   =    19'd640;        // subwindow size
 parameter                               SUB_WINDOW_HEIGHT  =    19'd480;
-parameter                               RADIUS             =    19'd210;        // length of scanning line
-parameter                               RADIUS_SQ          =    20'd34225;
-parameter                               CENTER_X           =    19'd333 + WIN_POS_X;        // center of the dashboard
-parameter                               CENTER_Y           =    19'd241 + WIN_POS_Y;
+parameter                               RADIUS_SQ          =    20'd44100;// length of scanning line
+
 parameter                               ICON_WIDTH         =    8'd8;           // icon size
 parameter                               ICON_HEIGHT        =    8'd8;
 parameter                               PLANE_WIDTH        =    8'd16;          // plane size
 parameter                               PLANE_HEIGHT       =    8'd16;
 parameter                               ROTATIONAL_SPEED   =    8'd10;         // rotational speed of scanning line
 parameter                               AFTERGLOW_DECAY    =    8'd4;
+
+reg[19:0]                               win_pos_x          =    19'd640;       // position of sub_window
+reg[19:0]                               win_pos_y          =    19'd480;
+
+wire[19:0]                              center_x;        // center of the dashboard
+wire[19:0]                              center_y;
 
 
 reg                                     de_d0;          
@@ -92,7 +96,6 @@ reg[18:0]                               addrb_d0;
 reg[18:0]                               addrb_d1;
 wire[23:0]                              doutb;       
 
-integer                                 radius;     // current raidus when plotting scanning line
 integer                                 i;
 
 reg[31:0]                               tempx_1;    
@@ -172,9 +175,13 @@ assign out_y = pos_y_d2;
 assign object_id = icon_region_active_d2;
 assign plot_data = doutb;
 assign o_data = i_data_d2;
-assign relative_x = pos_x - CENTER_X;
-assign relative_y = CENTER_Y - pos_y;
+assign center_x = win_pos_x + (SUB_WINDOW_WIDTH >> 1) + 8;
+assign center_y = win_pos_y + (SUB_WINDOW_HEIGHT >> 1);
+assign relative_x = pos_x - center_x;
+assign relative_y = center_y - pos_y;
 assign distance_sq = relative_x * relative_x + relative_y * relative_y;
+assign out_win_pos_x = win_pos_x;
+assign out_win_pos_y = win_pos_y;
 
 
 scale_point scale_p (
@@ -193,27 +200,7 @@ scale_point scale_p (
     .out_p1_direction   (p1_direction),
     .signal             (signal),
     .value              (value)
-
 );
-
-//// simulated objects
-//simu_point simu_p (
-//    .clk                (clk),
-//    .sys_clk            (sys_clk),
-//    .rst                (rst),
-//    .i_vs               (i_vs),
-//    .out1_x             (p1_x),
-//    .out1_y             (p1_y),
-//    .out2_x             (p2_x),
-//    .out2_y             (p2_y),
-//    .out3_x             (p3_x),
-//    .out3_y             (p3_y),
-//    .out4_x             (p4_x),
-//    .out4_y             (p4_y),
-//    .out1_value         (p1_direction),
-//    .signal             (signal),
-//    .value              (value)
-//);
 
 // ram storing plot layer
 plot_bram plot (
@@ -285,7 +272,7 @@ end
 
 //delay 1 clock 
 always@(posedge clk) begin
-    if(i_vs == 1'b1 && pos_y >= WIN_POS_Y && pos_y <= WIN_POS_Y + SUB_WINDOW_HEIGHT - 19'd1 && pos_x >= WIN_POS_X && pos_x  <= WIN_POS_X + SUB_WINDOW_WIDTH - 19'd1)
+    if(i_vs == 1'b1 && pos_y >= win_pos_y && pos_y <= win_pos_y + SUB_WINDOW_HEIGHT - 19'd1 && pos_x >= win_pos_x && pos_x  <= win_pos_x + SUB_WINDOW_WIDTH - 19'd1)
         region_active <= 1'b1;
 	else
 		region_active <= 1'b0;
@@ -330,7 +317,7 @@ always@(posedge clk or negedge rst) begin
     if(rst == 1'b0 || ~region_active) begin
         addrb <= 19'd0;
     end else begin
-        addrb <= (pos_y - WIN_POS_Y) * SUB_WINDOW_WIDTH + (pos_x - WIN_POS_X);
+        addrb <= (pos_y - win_pos_y) * SUB_WINDOW_WIDTH + (pos_x - win_pos_x);
     end 
 end    
 
@@ -456,6 +443,10 @@ always@(posedge clk or negedge rst) begin
             end
             8'd8: begin
                 echo_intensity_threshold <= value[7:0];
+            end
+            8'd10: begin
+                win_pos_x <= value[31:16];
+                win_pos_y <= value[15:0];
             end
         endcase
     end

@@ -18,9 +18,7 @@ module overlay(
 	input[31:0]                value
 );
 
-// subwindow parameter                               
-parameter                               WIN_POS_X          =    19'd640;       // position of sub_window
-parameter                               WIN_POS_Y          =    19'd480;      
+// subwindow parameter                                 
 parameter                               SUB_WINDOW_WIDTH   =    19'd640;
 parameter                               SUB_WINDOW_HEIGHT  =    19'd480;
 parameter                               WIN_WIDTH          =    19'd1920;
@@ -32,18 +30,21 @@ parameter                               DISPLAY_A_START_Y    =    19'd650;
 parameter                               DISPLAY_A_WIDTH      =    19'd384;
 parameter                               DISPLAY_A_HEIGHT     =    19'd144;
 
-parameter                               D1_START_X         =    19'd10 + WIN_POS_X;
-parameter                               D1_START_Y         =    19'd10 + WIN_POS_Y;
+reg[19:0]                               D1_START_X         =    19'd650;
+reg[19:0]                               D1_START_Y         =    19'd490;
 parameter                               DIS_HEIGHT         =    19'd16;
 parameter                               D1_WIDTH           =    19'd56;  //  longitude,latitude
 
-parameter                               D2_START_X         =    19'd66 + WIN_POS_X;
-parameter                               D2_START_Y         =    19'd10 + WIN_POS_Y;
+reg[19:0]                               D2_START_X         =    19'd706;
+reg[19:0]                               D2_START_Y         =    19'd490;
 parameter                               D2_WIDTH           =    19'd88;  //  longitude,latitude,value
 
 reg                                     i_vs_d0;
 reg                                     i_vs_d1;
 reg                                     i_vs_d2;
+
+reg[19:0]                               win_pos_x          =    19'd640;       // position of sub_window
+reg[19:0]                               win_pos_y          =    19'd480;
 
 reg[18:0]                               mouse_dis_start_x[9:0];          //  display area near mouse
 reg[18:0]                               mouse_dis_start_y[9:0];
@@ -173,7 +174,7 @@ bram_display_b bram_display_b_inst (
 
 //delay 1 clock 
 always@(posedge pclk) begin
-    if(i_vs == 1'b1 && pos_y >= WIN_POS_Y && pos_y <= WIN_POS_Y + SUB_WINDOW_HEIGHT - 19'd1 && pos_x >= WIN_POS_X && pos_x  <= WIN_POS_X + SUB_WINDOW_WIDTH - 19'd1)
+    if(i_vs == 1'b1 && pos_y >= win_pos_y && pos_y <= win_pos_y + SUB_WINDOW_HEIGHT - 19'd1 && pos_x >= win_pos_x && pos_x  <= win_pos_x + SUB_WINDOW_WIDTH - 19'd1)
         region_active <= 1'b1;
 	else
 		region_active <= 1'b0;
@@ -550,8 +551,8 @@ always@(posedge pclk or negedge rst_n) begin
                 icon_color_d0 <= icon_color;
             end
             8'd4: begin
-                mouse_x <= value[31:16] + WIN_POS_X;
-                mouse_y <= value[15:0] + WIN_POS_Y;
+                mouse_x <= value[31:16] + win_pos_x;
+                mouse_y <= value[15:0] + win_pos_y;
                 mouse_x_d0 <= mouse_x;
                 mouse_y_d0 <= mouse_y;
             end
@@ -561,6 +562,10 @@ always@(posedge pclk or negedge rst_n) begin
             end
             8'd7: begin
                 display_mode <= value[2:0];
+            end
+            8'd10: begin
+                win_pos_x <= value[31:16];
+                win_pos_y <= value[15:0];
             end
             default: begin
                 icon_color <= icon_color_d0;
