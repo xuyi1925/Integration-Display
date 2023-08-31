@@ -18,7 +18,6 @@ proc create_report { reportName command } {
 }
 set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7k325tffg900-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -88,12 +87,6 @@ set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FP
 
 read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b.xci
 set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b_ooc.xdc]
-
-read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_0.xci
-set_property used_in_synthesis false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

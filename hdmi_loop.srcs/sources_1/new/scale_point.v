@@ -113,19 +113,19 @@ simu_point simu_p (
     .out1_value         (p1_direction)
 ); 
 
-ila_0 scale_inst (
-	.clk(sys_clk), // input wire clk
+// ila_0 scale_inst (
+// 	.clk(sys_clk), // input wire clk
 
-	.probe0                    (x[2]), // input wire [11:0]  probe5 
-	.probe1                    (y[2]), // input wire [31:0]  probe6 
-	.probe2                    (scale_origin_x),
-	.probe3                    (scale_origin_y),
-	.probe4                    (p3_x),
-	.probe5                    (p3_y),
-    .probe6                    (display_width),
-    .probe7                    (display_height),
-    .probe8                    (scale)
-);
+// 	.probe0                    (x[2]), // input wire [11:0]  probe5 
+// 	.probe1                    (y[2]), // input wire [31:0]  probe6 
+// 	.probe2                    (scale_origin_x),
+// 	.probe3                    (scale_origin_y),
+// 	.probe4                    (p3_x),
+// 	.probe5                    (p3_y),
+//     .probe6                    (display_width),
+//     .probe7                    (display_height),
+//     .probe8                    (scale)
+// );
 
 
 always@(posedge clk) begin

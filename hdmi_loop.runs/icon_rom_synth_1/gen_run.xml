@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="icon_rom_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1693363527">
   <File Type="PA-TCL" Name="icon_rom.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="icon_rom_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="icon_rom_reports.tcl"/>
   <File Type="RDS-RDS" Name="icon_rom.vds"/>
   <File Type="RDS-UTIL" Name="icon_rom_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="icon_rom_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="icon_rom.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="icon_rom_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="icon_rom_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/icon_rom">
     <File Path="$PPRDIR/ipcores/icon_rom/icon_rom.xci">
       <FileInfo>

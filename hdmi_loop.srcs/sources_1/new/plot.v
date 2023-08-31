@@ -40,9 +40,7 @@ module plot(
     output[3:0]         object_id,
     output[23:0]        o_data,
     input[7:0]          signal,
-    input[31:0]         value,
-    output[19:0]        out_win_pos_x,
-    output[19:0]        out_win_pos_y
+    input[31:0]         value
 );
 parameter                               SUB_WINDOW_WIDTH   =    19'd640;        // subwindow size
 parameter                               SUB_WINDOW_HEIGHT  =    19'd480;
@@ -180,8 +178,6 @@ assign center_y = win_pos_y + (SUB_WINDOW_HEIGHT >> 1);
 assign relative_x = pos_x - center_x;
 assign relative_y = center_y - pos_y;
 assign distance_sq = relative_x * relative_x + relative_y * relative_y;
-assign out_win_pos_x = win_pos_x;
-assign out_win_pos_y = win_pos_y;
 
 
 scale_point scale_p (

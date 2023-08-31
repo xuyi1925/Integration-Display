@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1693387145">
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1693464297">
   <File Type="PWROPT-DCP" Name="hdmi_loop_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="hdmi_loop_power_routed.rpt"/>
   <File Type="PA-TCL" Name="hdmi_loop.tcl"/>
@@ -312,9 +312,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-      <Desc>Vivado Implementation Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design" EnableStepBool="1"/>
@@ -332,5 +330,4 @@
   <BlockFileSet Type="BlockSrcs" Name="plot_bram"/>
   <BlockFileSet Type="BlockSrcs" Name="rom_char"/>
   <BlockFileSet Type="BlockSrcs" Name="bram_display_a"/>
-  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
 </GenRun>

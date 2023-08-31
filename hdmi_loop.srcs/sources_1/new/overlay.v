@@ -19,32 +19,32 @@ module overlay(
 );
 
 // subwindow parameter                                 
-parameter                               SUB_WINDOW_WIDTH   =    19'd640;
-parameter                               SUB_WINDOW_HEIGHT  =    19'd480;
-parameter                               WIN_WIDTH          =    19'd1920;
-parameter                               WIN_HEIGHT         =    19'd1080;
+parameter                               SUB_WINDOW_WIDTH   =    20'd640;
+parameter                               SUB_WINDOW_HEIGHT  =    20'd480;
+parameter                               WIN_WIDTH          =    20'd1920;
+parameter                               WIN_HEIGHT         =    20'd1080;
 
 // display a area parameter
-parameter                               DISPLAY_A_START_X    =    19'd1310;
-parameter                               DISPLAY_A_START_Y    =    19'd650;
-parameter                               DISPLAY_A_WIDTH      =    19'd384;
-parameter                               DISPLAY_A_HEIGHT     =    19'd144;
+reg[19:0]                               DISPLAY_A_START_X    =    20'd1310;
+reg[19:0]                               DISPLAY_A_START_Y    =    20'd650;
+parameter                               DISPLAY_A_WIDTH      =    20'd384;
+parameter                               DISPLAY_A_HEIGHT     =    20'd144;
 
-reg[19:0]                               D1_START_X         =    19'd650;
-reg[19:0]                               D1_START_Y         =    19'd490;
-parameter                               DIS_HEIGHT         =    19'd16;
-parameter                               D1_WIDTH           =    19'd56;  //  longitude,latitude
+reg[19:0]                               D1_START_X         =    20'd650;
+reg[19:0]                               D1_START_Y         =    20'd490;
+parameter                               DIS_HEIGHT         =    20'd16;
+parameter                               D1_WIDTH           =    20'd56;  //  longitude,latitude
 
-reg[19:0]                               D2_START_X         =    19'd706;
-reg[19:0]                               D2_START_Y         =    19'd490;
-parameter                               D2_WIDTH           =    19'd88;  //  longitude,latitude,value
+reg[19:0]                               D2_START_X         =    20'd706;
+reg[19:0]                               D2_START_Y         =    20'd490;
+parameter                               D2_WIDTH           =    20'd88;  //  longitude,latitude,value
 
 reg                                     i_vs_d0;
 reg                                     i_vs_d1;
 reg                                     i_vs_d2;
 
-reg[19:0]                               win_pos_x          =    19'd640;       // position of sub_window
-reg[19:0]                               win_pos_y          =    19'd480;
+reg[19:0]                               win_pos_x          =    20'd640;       // position of sub_window
+reg[19:0]                               win_pos_y          =    20'd480;
 
 reg[18:0]                               mouse_dis_start_x[9:0];          //  display area near mouse
 reg[18:0]                               mouse_dis_start_y[9:0];
@@ -101,9 +101,8 @@ reg[23:0]                               icon_color_d0;
 
 reg[7:0]                                current_object_id = 8'd0;
 
-reg[23:0]                               ori_data_simu = 24'h000000;
-reg[7:0]                                alpha = 8'hff;
-reg[7:0]                                alpha_d0;
+reg[8:0]                                alpha = 8'h00;
+reg[8:0]                                alpha_d0;
 
 reg[15:0]                               color_r_temp;
 reg[15:0]                               color_g_temp;
@@ -159,7 +158,7 @@ bram_display_b bram_display_b_inst (
     .doutb              (display_b_data)  // output wire [15 : 0] doutb
 );
 
-//bram_display_r bram_display_r_inst (
+// bram_display_r bram_display_r_inst (
 //    .clka               (pclk),         // input wire clka
 //    .ena                (1'b0),         // input wire ena
 //    .wea                (1'b0),         // input wire [0 : 0] wea
@@ -169,20 +168,20 @@ bram_display_b bram_display_b_inst (
 //    .enb                (display_mode[0]), // input wire enb
 //    .addrb              (display_a_addr),  // input wire [9 : 0] addrb
 //    .doutb              (display_r_data)  // output wire [15 : 0] doutb
-//);
+// );
 
 
 //delay 1 clock 
 always@(posedge pclk) begin
-    if(i_vs == 1'b1 && pos_y >= win_pos_y && pos_y <= win_pos_y + SUB_WINDOW_HEIGHT - 19'd1 && pos_x >= win_pos_x && pos_x  <= win_pos_x + SUB_WINDOW_WIDTH - 19'd1)
+    if(i_vs == 1'b1 && pos_y >= win_pos_y && pos_y <= win_pos_y + SUB_WINDOW_HEIGHT - 20'd1 && pos_x >= win_pos_x && pos_x  <= win_pos_x + SUB_WINDOW_WIDTH - 20'd1)
         region_active <= 1'b1;
 	else
 		region_active <= 1'b0;
 end
 
 always@(posedge pclk) begin
-    if(pos_y >= D1_START_Y && pos_y <= D1_START_Y + DIS_HEIGHT - 19'd1) begin
-        if (pos_x >= D1_START_X && pos_x <= D1_START_X + D1_WIDTH - 19'd1) begin
+    if(pos_y >= D1_START_Y && pos_y <= D1_START_Y + DIS_HEIGHT - 20'd1) begin
+        if (pos_x >= D1_START_X && pos_x <= D1_START_X + D1_WIDTH - 20'd1) begin
             d1_region_active <= 8'd1;
         end else if (pos_x >= D2_START_X && pos_x <= D2_START_X + D2_WIDTH)begin
             temp_x <= pos_x - D2_START_X;
@@ -250,12 +249,12 @@ end
 always@(posedge pclk) begin
     if (region_active == 1'b1) begin
         if (pos_x > mouse_x && pos_x < mouse_x + 12'd5 && pos_y >= mouse_y && pos_y < mouse_y + 12'd4) begin
-            v_data <= 24'h00ffbf;  
+            v_data <= MOUSE_RGB;  
         end else if (mouse_dis_flag && mouse_dis_region_active_d2 > 8'd0) begin
             if (q[mouse_dis_x[mouse_dis_region_active_d2][2:0]] == 1'b1) begin
-                color_r_temp <= ((8'h00 * (8'hff - alpha)) >> 8);
-                color_g_temp <= ((8'hff * (8'hff - alpha)) >> 8);
-                color_b_temp <= ((8'hbf * (8'hff - alpha)) >> 8);
+                color_r_temp <= ((8'h00 * (9'h100 - alpha)) >> 8);
+                color_g_temp <= ((8'hff * (9'h100 - alpha)) >> 8);
+                color_b_temp <= ((8'hbf * (9'h100 - alpha)) >> 8);
                 color_r_ori_temp <= ((ori_data[23:16] * alpha) >> 8);
                 color_g_ori_temp <= ((ori_data[15:8] * alpha) >> 8);
                 color_b_ori_temp <= ((ori_data[7:0] * alpha) >> 8);
@@ -265,9 +264,9 @@ always@(posedge pclk) begin
             end
         end else if (d1_region_active_d2 > 8'd0) begin
             if (q[osd_x[d1_region_active_d2][2:0]] == 1'b1) begin
-                color_r_temp <= ((icon_color[23:16] * (8'hff - alpha)) >> 8);
-                color_g_temp <= ((icon_color[15:8] * (8'hff - alpha)) >> 8);
-                color_b_temp <= ((icon_color[7:0] * (8'hff - alpha)) >> 8);
+                color_r_temp <= ((icon_color[23:16] * (9'h100 - alpha)) >> 8);
+                color_g_temp <= ((icon_color[15:8] * (9'h100 - alpha)) >> 8);
+                color_b_temp <= ((icon_color[7:0] * (9'h100 - alpha)) >> 8);
                 color_r_ori_temp <= ((ori_data[23:16] * alpha) >> 8);
                 color_g_ori_temp <= ((ori_data[15:8] * alpha) >> 8);
                 color_b_ori_temp <= ((ori_data[7:0] * alpha) >> 8);
@@ -348,10 +347,10 @@ always@(posedge pclk) begin
             char_addr[i] <= 16'd0;
         end
     end
-end
-
-// address in display area near mouse
-always@(posedge pclk) begin
+end 
+ 
+// address in display area near mo use
+always@(posedge pclk) begin 
 	if(mouse_dis_region_active > 0) begin
 		mouse_dis_addr[mouse_dis_region_active] <= mouse_dis_addr[mouse_dis_region_active] + 16'd1;
     end else if (vs_edge == 1'b1)begin
@@ -529,10 +528,10 @@ always@(posedge pclk or negedge rst_n) begin
         mouse_dis_values[2] <= 8'd21; // danger level value
         mouse_dis_values[3] <= 8'd19; // type char
         mouse_dis_values[4] <= 8'd21; // type value
-        mouse_dis_width[1] <= 19'd72;
-        mouse_dis_width[2] <= 19'd8;
-        mouse_dis_width[3] <= 19'd40;
-        mouse_dis_width[4] <= 19'd8;
+        mouse_dis_width[1] <= 20'd72;
+        mouse_dis_width[2] <= 20'd8;
+        mouse_dis_width[3] <= 20'd40;
+        mouse_dis_width[4] <= 20'd8;
     end else begin
         mouse_dis_values[2] <= 8'd20 + current_object_id;
     end 
@@ -544,6 +543,15 @@ always@(posedge pclk or negedge rst_n) begin
         mouse_x <= 12'd0;
         mouse_y <= 12'd0;
         display_mode <= 3'b100;
+        alpha <= 8'd0;
+        win_pos_x <= 20'd640;
+        win_pos_y <= 20'd480;
+        D1_START_X <= 20'd650;
+        D1_START_Y <= 20'd490;
+        D2_START_X <= 20'd706;
+        D2_START_Y <= 20'd490;
+        DISPLAY_A_START_X <= 20'd1310;
+        DISPLAY_A_START_Y <= 20'd650;
     end else begin
         case (signal) 
             8'd1: begin
@@ -566,12 +574,26 @@ always@(posedge pclk or negedge rst_n) begin
             8'd10: begin
                 win_pos_x <= value[31:16];
                 win_pos_y <= value[15:0];
+                D1_START_X <= value[31:16] + 16'd10;
+                D1_START_Y <= value[15:0] + 16'd10;
+                D2_START_X <= value[31:16] + 16'd66;
+                D2_START_Y <= value[15:0] + 16'd10;
+                DISPLAY_A_START_X <= value[31:16] + 16'd670;
+                DISPLAY_A_START_Y <= value[15:0] + 16'd170;
             end
             default: begin
                 icon_color <= icon_color_d0;
                 alpha <= alpha_d0;
                 mouse_x <= mouse_x_d0;
                 mouse_y <= mouse_y_d0;
+                win_pos_x <= win_pos_x;
+                win_pos_y <= win_pos_y;
+                D1_START_X <= D1_START_X;
+                D1_START_Y <= D1_START_Y;
+                D2_START_X <= D2_START_X;
+                D2_START_Y <= D2_START_X;
+                DISPLAY_A_START_X <= DISPLAY_A_START_X;
+                DISPLAY_A_START_Y <= DISPLAY_A_START_Y;
             end
         endcase
     end 

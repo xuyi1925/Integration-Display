@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -83,7 +82,6 @@ set rc [catch {
   read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data.xci
   read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_a_2/bram_display_a.xci
   read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b.xci
-  read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/ila_0/ila_0.xci
   read_xdc C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc
   link_design -top hdmi_loop -part xc7k325tffg900-2
   close_msg_db -file init_design.pb

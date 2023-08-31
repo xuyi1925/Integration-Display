@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Aug 30 17:20:43 2023
-# Process ID: 36336
+# Start of session at: Thu Aug 31 14:46:31 2023
+# Process ID: 36540
 # Current directory: C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1
 # Command line: vivado.exe -log hdmi_loop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_loop.tcl -notrace
 # Log file: C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.vdi
