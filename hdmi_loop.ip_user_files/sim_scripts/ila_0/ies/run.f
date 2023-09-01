@@ -6,7 +6,7 @@
   "D:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../../hdmi_loop.srcs/sources_1/ip/ila_0/sim/ila_0.v" \
+  "../../../../ipcores/ila_0/sim/ila_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

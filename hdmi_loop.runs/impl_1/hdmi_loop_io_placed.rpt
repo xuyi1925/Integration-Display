@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date                      : Thu Aug 31 14:49:47 2023
+| Date                      : Fri Sep  1 16:00:08 2023
 | Host                      : DESKTOP-IDDFDEU running 64-bit major release  (build 9200)
 | Command                   : report_io -file hdmi_loop_io_placed.rpt
 | Design                    : hdmi_loop
@@ -902,7 +902,7 @@ Table of Contents
 | W25        |                | High Range       | VCCO_14                      | VCCO          |             |      14 |            |      |                     |                      |     any** |            |           |          |      |                  |              |                   |              |
 | W26        |                | High Range       | IO_L18N_T2_A11_D27_14        | User IO       |             |      14 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | W27        | hdmi1_nreset   | High Range       | IO_L2P_T0_13                 | OUTPUT        | LVCMOS33    |      13 |         12 | SLOW |                     |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
-| W28        | uart_tx        | High Range       | IO_L2N_T0_13                 | OUTPUT        | LVCMOS33    |      13 |         12 | SLOW |                     |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
+| W28        | uart_tx        | High Range       | IO_L2N_T0_13                 | TRISTATE      | LVCMOS33    |      13 |         12 | SLOW |                     |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | W29        |                | High Range       | IO_L4P_T0_13                 | User IO       |             |      13 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | W30        |                |                  | GND                          | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | Y1         |                |                  | MGTXTXN0_115                 | Gigabit       |             |         |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |

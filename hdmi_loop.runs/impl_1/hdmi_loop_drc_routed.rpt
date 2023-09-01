@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Aug 31 14:52:56 2023
+| Date         : Fri Sep  1 16:02:26 2023
 | Host         : DESKTOP-IDDFDEU running 64-bit major release  (build 9200)
 | Command      : report_drc -file hdmi_loop_drc_routed.rpt -pb hdmi_loop_drc_routed.pb -rpx hdmi_loop_drc_routed.rpx
 | Design       : hdmi_loop
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 102
+             Violations found: 127
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
@@ -33,10 +33,11 @@ Table of Contents
 | DPIP-1    | Warning  | Input pipelining                                    | 16         |
 | DPOP-1    | Warning  | PREG Output pipelining                              | 9          |
 | DPOP-2    | Warning  | MREG Output pipelining                              | 7          |
-| PDRC-153  | Warning  | Gated clock check                                   | 24         |
+| PDRC-153  | Warning  | Gated clock check                                   | 48         |
 | REQP-1839 | Warning  | RAMB36 async control check                          | 20         |
 | REQP-1840 | Warning  | RAMB18 async control check                          | 20         |
 | RPBF-3    | Warning  | IO port buffering is incomplete                     | 2          |
+| RTSTAT-10 | Warning  | No routable loads                                   | 1          |
 | REQP-165  | Advisory | writefirst                                          | 1          |
 +-----------+----------+-----------------------------------------------------+------------+
 
@@ -227,120 +228,240 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][0]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][0]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[0]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][10]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][10]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[10]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][11]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][11]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[11]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][1]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][1]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[1]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][2]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][2]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[2]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][3]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][3]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[3]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][4]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][4]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[4]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][5]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][5]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[5]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][6]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][6]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[6]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][7]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][7]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[7]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][8]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][8]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[8]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net reset_power_on_m0/x_reg[0][9]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][9]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_x_d0_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[9]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][0]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][0]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[0]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][10]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][10]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[10]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][11]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][11]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[11]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][1]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][1]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[1]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#17 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][2]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][2]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[2]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#18 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][3]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][3]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[3]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#19 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][4]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][4]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[4]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#20 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][5]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][5]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[5]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#21 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][6]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][6]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[6]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#22 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][7]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][7]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[7]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#23 Warning
 Gated clock check  
-Net reset_power_on_m0/y_reg[0][8]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][8]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net overlay_m1/mouse_y_d0_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[8]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#24 Warning
+Gated clock check  
+Net overlay_m1/mouse_y_d0_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[9]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][0]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][0]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][10]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][10]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][11]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][11]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#28 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][1]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][1]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#29 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][2]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][2]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#30 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][3]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][3]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#31 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][4]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][4]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#32 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][5]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][5]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#33 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][6]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][6]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#34 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][7]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][7]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#35 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][8]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][8]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#36 Warning
+Gated clock check  
+Net reset_power_on_m0/x_reg[0][9]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][9]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#37 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][0]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][0]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#38 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][10]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][10]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#39 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][11]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][11]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#40 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][1]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][1]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#41 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][2]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][2]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#42 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][3]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][3]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#43 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][4]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][4]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#44 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][5]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][5]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#45 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][6]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][6]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#46 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][7]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][7]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#47 Warning
+Gated clock check  
+Net reset_power_on_m0/y_reg[0][8]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][8]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#48 Warning
 Gated clock check  
 Net reset_power_on_m0/y_reg[0][9]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][9]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
@@ -553,6 +674,11 @@ Related violations: <none>
 RPBF-3#2 Warning
 IO port buffering is incomplete  
 Device port hdmi2_edid_scl expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+21 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, overlay_m1/ila_0_inst/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], overlay_m1/ila_0_inst/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14], overlay_m1/ila_0_inst/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[15], overlay_m1/ila_0_inst/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[16] (the first 15 of 19 listed).
 Related violations: <none>
 
 REQP-165#1 Advisory

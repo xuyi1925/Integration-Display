@@ -170,6 +170,21 @@ bram_display_b bram_display_b_inst (
 //    .doutb              (display_r_data)  // output wire [15 : 0] doutb
 // );
 
+ila_0 ila_0_inst (
+	.clk(sys_clk), // input wire clk
+
+
+	.probe0(signal), // input wire [31:0]  probe0  
+	.probe1(value), // input wire [31:0]  probe1 
+	.probe2(mouse_x), // input wire [11:0]  probe2 
+	.probe3(mouse_x_d0), // input wire [11:0]  probe3 
+	.probe4(mouse_y), // input wire [11:0]  probe4 
+	.probe5(mouse_y_d0), // input wire [11:0]  probe5 
+	.probe6(D1_START_Y), // input wire [11:0]  probe6 
+	.probe7(D2_START_Y), // input wire [11:0]  probe7 
+	.probe8(win_pos_y) // input wire [7:0]  probe8
+);
+
 
 //delay 1 clock 
 always@(posedge pclk) begin
@@ -582,16 +597,16 @@ always@(posedge pclk or negedge rst_n) begin
                 DISPLAY_A_START_Y <= value[15:0] + 16'd170;
             end
             default: begin
-                icon_color <= icon_color_d0;
-                alpha <= alpha_d0;
-                mouse_x <= mouse_x_d0;
-                mouse_y <= mouse_y_d0;
+                icon_color <= icon_color;
+                alpha <= alpha;
+                mouse_x <= mouse_x;
+                mouse_y <= mouse_y;
                 win_pos_x <= win_pos_x;
                 win_pos_y <= win_pos_y;
                 D1_START_X <= D1_START_X;
                 D1_START_Y <= D1_START_Y;
                 D2_START_X <= D2_START_X;
-                D2_START_Y <= D2_START_X;
+                D2_START_Y <= D2_START_Y;
                 DISPLAY_A_START_X <= DISPLAY_A_START_X;
                 DISPLAY_A_START_Y <= DISPLAY_A_START_Y;
             end

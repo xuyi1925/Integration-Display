@@ -56,7 +56,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/timing_gen_xy.v
   C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_rs.v
   C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_rx.v
-  C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/new/uart_tx.v
   C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/imports/src/hdmi_loop.v
 }
 read_vhdl -library xil_defaultlib {
@@ -87,6 +86,12 @@ set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FP
 
 read_ip -quiet C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b.xci
 set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b_ooc.xdc]
+
+read_ip -quiet c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_0.xci
+set_property used_in_synthesis false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

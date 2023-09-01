@@ -1,5 +1,5 @@
-verilog xil_defaultlib --include "../../../../hdmi_loop.srcs/sources_1/ip/ila_0/hdl/verilog" \
-"../../../../hdmi_loop.srcs/sources_1/ip/ila_0/sim/ila_0.v" \
+verilog xil_defaultlib --include "../../../../ipcores/ila_0/hdl/verilog" \
+"../../../../ipcores/ila_0/sim/ila_0.v" \
 
 verilog xil_defaultlib "glbl.v"
 
