@@ -50,11 +50,19 @@ parameter                               ICON_WIDTH         =    8'd8;           
 parameter                               ICON_HEIGHT        =    8'd8;
 parameter                               PLANE_WIDTH        =    8'd16;          // plane size
 parameter                               PLANE_HEIGHT       =    8'd16;
-parameter                               ROTATIONAL_SPEED   =    8'd10;         // rotational speed of scanning line
+
+reg[7:0]                                rotational_speed   =    8'd10;          // rotational speed of scanning line
+reg                                     rotational_direction = 1'b1;            // 1 = clockwise, 0 = anticlockwise
+reg[15:0]                               angle_start         =   16'd0;
+reg[15:0]                               angle_end           =   16'd3600;
+reg[15:0]                               angle_start_d0      =   16'd0;
+reg[15:0]                               angle_end_d0        =   16'd3600;
 parameter                               AFTERGLOW_DECAY    =    8'd4;
 
 reg[19:0]                               win_pos_x          =    19'd640;       // position of sub_window
 reg[19:0]                               win_pos_y          =    19'd480;
+reg[19:0]                               win_pos_x_d0       =    19'd640;
+reg[19:0]                               win_pos_y_d0       =    19'd480;
 
 wire[19:0]                              center_x;        // center of the dashboard
 wire[19:0]                              center_y;
@@ -83,7 +91,8 @@ reg[15:0]                               scanning_line_y;    // current y-coordin
 wire                                    vs_edge;
 wire                                    de_falling;
 
-reg[11:0]                               theta = 12'd0;    // angle of scanning line
+reg[15:0]                               theta = 12'd0;    // angle of scanning line
+reg[15:0]                               theta_d0;
 
 
 reg                                     ena;        // signals to the plotting layer ram
@@ -95,13 +104,6 @@ reg[18:0]                               addrb_d1;
 wire[23:0]                              doutb;       
 
 integer                                 i;
-
-reg[31:0]                               tempx_1;    
-reg[31:0]                               tempy_1;
-reg[31:0]                               tempx_2;
-reg[31:0]                               tempy_2;
-reg[31:0]                               tempx_3;
-reg[31:0]                               tempy_3;
 
 wire[11:0]                              p1_x;   // position coordinates of objects
 wire[11:0]                              p1_y;
@@ -146,12 +148,13 @@ reg[23:0]                               i_data_d1;
 reg[23:0]                               i_data_d2;
 
 reg[7:0]                                icon_values    [8:0];  // values of objects(icon id)
+reg[7:0]                                icon_values_d0 [8:0];
 
 wire[31:0]                              distance_sq;
-reg[11:0]                               theta_d0;
 wire[15:0]                              current_pixel_theta;
 
 reg[7:0]                                danger_level_threshold = 8'd0;
+reg[7:0]                                danger_level_threshold_d0 = 8'd0;
 wire signed [11:0]                      relative_x;
 wire signed [11:0]                      relative_y;
 
@@ -159,9 +162,11 @@ wire                                    scale_signal_flag;
 reg[9:0]                                addrb_display_a;
 reg[31:0]                               doutb_display_a;
 
-reg[7:0]                                alpha;
+reg[7:0]                                alpha = 8'd0;
+reg[7:0]                                alpha_d0 = 8'd0;
 
 reg[7:0]                                echo_intensity_threshold = 8'd0;
+reg[7:0]                                echo_intensity_threshold_d0 = 8'd0;
 
 assign vs_edge = vs_d0 & ~vs_d1;  
 assign de_falling = ~de_d0 & de_d1;
@@ -230,6 +235,18 @@ icon_rom icon (
   .douta                (q)                 // output wire [7 : 0] douta
 );
 
+ila_0 ila_0_inst (
+	.clk(sys_clk), // input wire clk
+
+
+    .probe0(clk),
+	.probe1(signal), // input wire [31:0]  probe0  
+	.probe2(value), // input wire [31:0]  probe1 
+	.probe3(theta), // input wire [11:0]  probe2 
+	.probe4(angle_start), // input wire [11:0]  probe3 
+    .probe5(angle_end)
+);
+
 
 // delay
 always@(posedge clk) begin
@@ -284,7 +301,7 @@ always@(posedge clk or negedge rst) begin
         // plot objects
         if (icon_region_active_d2 > 4'd0 && q[icon_x[icon_region_active_d2][2:0]] == 1'b1) begin
             dina <= 24'hff0000;
-        end else if (distance_sq <= RADIUS_SQ && current_pixel_theta <= theta && current_pixel_theta > theta_d0) begin
+        end else if ((rotational_direction && distance_sq <= RADIUS_SQ && current_pixel_theta <= theta && current_pixel_theta > theta_d0) || (~rotational_direction && distance_sq <= RADIUS_SQ && current_pixel_theta >= theta && current_pixel_theta < theta_d0)) begin
             dina <= 24'hffffff;
         end else if (doutb > 24'h000000) begin
             if (doutb[23:16] > AFTERGLOW_DECAY) begin
@@ -322,10 +339,18 @@ always@(posedge clk or negedge rst) begin
     if(rst == 1'b0)
         theta <= 12'd0;
     else if(vs_edge == 1'b1) begin
-        if (theta >= 3600 - ROTATIONAL_SPEED) begin
-            theta <= 12'd0;
+        if (rotational_direction) begin
+            if (theta >= angle_end - rotational_speed) begin
+                theta <= angle_start;
+            end else begin
+                theta <= theta + rotational_speed;
+            end
         end else begin
-            theta <= theta + ROTATIONAL_SPEED;
+            if (theta <= angle_start + rotational_speed) begin
+                theta <= angle_end;
+            end else begin
+                theta <= theta - rotational_speed;
+            end
         end
         theta_d0 <= theta;
     end
@@ -374,7 +399,7 @@ always@(posedge clk) begin
 	if(vs_edge == 1'b1)
 		icon_ram_addr <= 16'd0;        
 	else if(icon_region_active > 4'd0) begin
-	    case (icon_values[icon_region_active])
+	    case (icon_values_d0[icon_region_active])
 	    8'd1: begin
             icon_ram_addr <= icon_addr[icon_region_active];
 	    end 
@@ -421,28 +446,71 @@ always@(posedge clk or negedge rst) begin
         icon_values[1] <= 8'd12;
         for (i = 2; i < 9; i = i + 1) begin
             icon_values[i] <= i;
+            icon_values_d0[i] <= i;
         end
         danger_level_threshold <= 8'd0;
+        danger_level_threshold_d0 <= 8'd0;
+        alpha <= 8'd0;
+        alpha_d0 <= 8'd0;
+        echo_intensity_threshold <= 8'd0;
+        echo_intensity_threshold_d0 <= 8'd0;
+        win_pos_x <= 20'd640;
+        win_pos_x_d0 <= 20'd640;
+        win_pos_y <= 20'd480;
+        win_pos_y_d0 <= 20'd480;
+        rotational_direction <= 1'b1;
+        angle_start <= 16'd0;
+        angle_start_d0 <= 16'd0;
+        angle_end <= 16'd3600;
+        angle_end_d0 <= 16'd3600;
     end else begin
         icon_values[1] <= p1_direction;
+        icon_values_d0[1] <= p1_direction;
         case (signal)
             8'd2: begin
                 for (i = 2; i < 9; i = i + 1) begin
                     icon_values[i] <= value[7:0];
+                    icon_values_d0[i] <= icon_values[i];
                 end
             end
             8'd3: begin
                 danger_level_threshold <= value[7:0];
+                danger_level_threshold_d0 <= danger_level_threshold;
             end
             8'd6: begin
                 alpha <= value[7:0];
+                alpha_d0 <= alpha;
             end
             8'd8: begin
                 echo_intensity_threshold <= value[7:0];
+                echo_intensity_threshold_d0 <= echo_intensity_threshold;
             end
             8'd10: begin
                 win_pos_x <= value[31:16];
                 win_pos_y <= value[15:0];
+                win_pos_x_d0 <= win_pos_x;
+                win_pos_y_d0 <= win_pos_y;
+            end
+            8'd11: begin
+                rotational_direction <= ~rotational_direction;
+            end
+            8'd12: begin
+                angle_start <= value[31:16];
+                angle_end <= value[15:0];
+                angle_start_d0 <= angle_start;
+                angle_end_d0 <= angle_end;
+            end
+            default: begin
+                for (i = 2; i < 9; i = i + 1) begin
+                    icon_values[i] <= icon_values_d0[i];
+                end
+                danger_level_threshold <= danger_level_threshold_d0;
+                alpha <= alpha_d0;  
+                echo_intensity_threshold <= echo_intensity_threshold_d0;
+                win_pos_x <= win_pos_x_d0;
+                win_pos_y <= win_pos_y_d0;
+                angle_start <= angle_start_d0;
+                angle_end <= angle_end_d0;
             end
         endcase
     end

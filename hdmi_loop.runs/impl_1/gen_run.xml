@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1693554808">
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1693818108">
   <File Type="PWROPT-DCP" Name="hdmi_loop_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="hdmi_loop_power_routed.rpt"/>
   <File Type="PA-TCL" Name="hdmi_loop.tcl"/>
@@ -222,14 +222,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/uart_tx.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/src/lut_sil9136.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -317,7 +309,7 @@
       <Desc>Vivado Implementation Defaults</Desc>
     </StratHandle>
     <Step Id="init_design"/>
-    <Step Id="opt_design"/>
+    <Step Id="opt_design" EnableStepBool="0"/>
     <Step Id="power_opt_design" EnableStepBool="1"/>
     <Step Id="place_design"/>
     <Step Id="post_place_power_opt_design"/>

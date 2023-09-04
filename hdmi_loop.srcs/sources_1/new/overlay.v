@@ -27,16 +27,22 @@ parameter                               WIN_HEIGHT         =    20'd1080;
 // display a area parameter
 reg[19:0]                               DISPLAY_A_START_X    =    20'd1310;
 reg[19:0]                               DISPLAY_A_START_Y    =    20'd650;
+reg[19:0]                               DISPLAY_A_START_X_d0 =    20'd1310;
+reg[19:0]                               DISPLAY_A_START_Y_d0 =    20'd650;
 parameter                               DISPLAY_A_WIDTH      =    20'd384;
 parameter                               DISPLAY_A_HEIGHT     =    20'd144;
 
 reg[19:0]                               D1_START_X         =    20'd650;
 reg[19:0]                               D1_START_Y         =    20'd490;
+reg[19:0]                               D1_START_X_d0      =    20'd650;
+reg[19:0]                               D1_START_Y_d0      =    20'd490;
 parameter                               DIS_HEIGHT         =    20'd16;
 parameter                               D1_WIDTH           =    20'd56;  //  longitude,latitude
 
 reg[19:0]                               D2_START_X         =    20'd706;
 reg[19:0]                               D2_START_Y         =    20'd490;
+reg[19:0]                               D2_START_X_d0      =    20'd706;
+reg[19:0]                               D2_START_Y_d0      =    20'd490;
 parameter                               D2_WIDTH           =    20'd88;  //  longitude,latitude,value
 
 reg                                     i_vs_d0;
@@ -45,6 +51,8 @@ reg                                     i_vs_d2;
 
 reg[19:0]                               win_pos_x          =    20'd640;       // position of sub_window
 reg[19:0]                               win_pos_y          =    20'd480;
+reg[19:0]                               win_pos_x_d0       =    20'd640;    
+reg[19:0]                               win_pos_y_d0       =    20'd480;
 
 reg[18:0]                               mouse_dis_start_x[9:0];          //  display area near mouse
 reg[18:0]                               mouse_dis_start_y[9:0];
@@ -97,7 +105,7 @@ reg[11:0]                               temp_x;
 reg[7:0]                                long_lati_values   [19:0];
 
 reg[23:0]                               icon_color = 24'hff0000;
-reg[23:0]                               icon_color_d0;
+reg[23:0]                               icon_color_d0 = 24'hff0000;
 
 reg[7:0]                                current_object_id = 8'd0;
 
@@ -169,21 +177,6 @@ bram_display_b bram_display_b_inst (
 //    .addrb              (display_a_addr),  // input wire [9 : 0] addrb
 //    .doutb              (display_r_data)  // output wire [15 : 0] doutb
 // );
-
-ila_0 ila_0_inst (
-	.clk(sys_clk), // input wire clk
-
-
-	.probe0(signal), // input wire [31:0]  probe0  
-	.probe1(value), // input wire [31:0]  probe1 
-	.probe2(mouse_x), // input wire [11:0]  probe2 
-	.probe3(mouse_x_d0), // input wire [11:0]  probe3 
-	.probe4(mouse_y), // input wire [11:0]  probe4 
-	.probe5(mouse_y_d0), // input wire [11:0]  probe5 
-	.probe6(D1_START_Y), // input wire [11:0]  probe6 
-	.probe7(D2_START_Y), // input wire [11:0]  probe7 
-	.probe8(win_pos_y) // input wire [7:0]  probe8
-);
 
 
 //delay 1 clock 
@@ -595,20 +588,28 @@ always@(posedge pclk or negedge rst_n) begin
                 D2_START_Y <= value[15:0] + 16'd10;
                 DISPLAY_A_START_X <= value[31:16] + 16'd670;
                 DISPLAY_A_START_Y <= value[15:0] + 16'd170;
+                win_pos_x_d0 <= win_pos_x;
+                win_pos_y_d0 <= win_pos_y;
+                D1_START_X_d0 <= D1_START_X;
+                D1_START_Y_d0 <= D1_START_Y;
+                D2_START_X_d0 <= D2_START_X;
+                D2_START_Y_d0 <= D2_START_Y;
+                DISPLAY_A_START_X_d0 <= DISPLAY_A_START_X;
+                DISPLAY_A_START_Y_d0 <= DISPLAY_A_START_Y;
             end
             default: begin
-                icon_color <= icon_color;
-                alpha <= alpha;
-                mouse_x <= mouse_x;
-                mouse_y <= mouse_y;
-                win_pos_x <= win_pos_x;
-                win_pos_y <= win_pos_y;
-                D1_START_X <= D1_START_X;
-                D1_START_Y <= D1_START_Y;
-                D2_START_X <= D2_START_X;
-                D2_START_Y <= D2_START_Y;
-                DISPLAY_A_START_X <= DISPLAY_A_START_X;
-                DISPLAY_A_START_Y <= DISPLAY_A_START_Y;
+                icon_color <= icon_color_d0;
+                alpha <= alpha_d0;
+                mouse_x <= mouse_x_d0;
+                mouse_y <= mouse_y_d0;
+                win_pos_x <= win_pos_x_d0;
+                win_pos_y <= win_pos_y_d0;
+                D1_START_X <= D1_START_X_d0;
+                D1_START_Y <= D1_START_Y_d0;
+                D2_START_X <= D2_START_X_d0;
+                D2_START_Y <= D2_START_Y_d0;
+                DISPLAY_A_START_X <= DISPLAY_A_START_X_d0;
+                DISPLAY_A_START_Y <= DISPLAY_A_START_Y_d0;
             end
         endcase
     end 

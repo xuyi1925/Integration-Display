@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri Sep  1 15:54:56 2023
-# Process ID: 17732
+# Start of session at: Mon Sep  4 17:05:20 2023
+# Process ID: 32812
 # Current directory: C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1
 # Command line: vivado.exe -log hdmi_loop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_loop.tcl -notrace
 # Log file: C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.vdi
@@ -17,253 +17,138 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_h
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_a_2/bram_display_a.dcp' for cell 'overlay_m1/bram_display_a_inst'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/bram_display_b/bram_display_b.dcp' for cell 'overlay_m1/bram_display_b_inst'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_char/rom_char.dcp' for cell 'overlay_m1/char_dis'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_0.dcp' for cell 'overlay_m1/ila_0_inst'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/icon_rom/icon_rom.dcp' for cell 'plot_m1/icon'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_0.dcp' for cell 'plot_m1/ila_0_inst'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/plot_bram/plot_bram.dcp' for cell 'plot_m1/plot'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/rom_theta_data/rom_theta_data.dcp' for cell 'plot_m1/rom_theta_data_inst'
-INFO: [Netlist 29-17] Analyzing 1944 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1919 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.4
 INFO: [Device 21-403] Loading part xc7k325tffg900-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Chipscope 16-324] Core: overlay_m1/ila_0_inst UUID: 92d99f52-8c0b-57ff-8fb1-2e37c456f5e9 
+INFO: [Chipscope 16-324] Core: plot_m1/ila_0_inst UUID: bd2f696c-03e0-52a7-ac19-449e1d4e2ae5 
 Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll_board.xdc] for cell 'sys_pll_m0/inst'
 Finished Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll_board.xdc] for cell 'sys_pll_m0/inst'
 Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll.xdc] for cell 'sys_pll_m0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll.xdc:57]
-get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1426.879 ; gain = 620.109
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1425.520 ; gain = 619.418
 Finished Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/sources_1/ip/sys_pll_1/sys_pll.xdc] for cell 'sys_pll_m0/inst'
-Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'overlay_m1/ila_0_inst/inst'
-Finished Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'overlay_m1/ila_0_inst/inst'
-Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'overlay_m1/ila_0_inst/inst'
-Finished Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'overlay_m1/ila_0_inst/inst'
+Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'plot_m1/ila_0_inst/inst'
+Finished Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'plot_m1/ila_0_inst/inst'
+Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'plot_m1/ila_0_inst/inst'
+Finished Parsing XDC File [c:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/ipcores/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'plot_m1/ila_0_inst/inst'
 Parsing XDC File [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc]
 WARNING: [Constraints 18-619] A clock with name 'sys_clk_p' already exists, overwriting the previous clock with the same name. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:9]
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out1_sys_pll' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:273]
 Finished Parsing XDC File [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 126 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 120 instances
+  A total of 82 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 76 instances
   IOBUF => IOBUF (IBUF, OBUFT): 6 instances
 
 19 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1435.457 ; gain = 1100.871
+link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1433.098 ; gain = 1098.793
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
-Command: opt_design
+Command: power_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
-Running DRC as a precondition to command opt_design
-
-Starting DRC Task
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port hdmi1_edid_scl expects both input and output buffering but the buffers are incomplete.
-WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port hdmi2_edid_scl expects both input and output buffering but the buffers are incomplete.
-INFO: [Project 1-461] DRC finished with 0 Errors, 2 Warnings
-INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1435.457 ; gain = 0.000
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out1_sys_pll' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:273]
 INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: 108af2c84
+INFO: [Pwropt 34-50] Optimizing power for module hdmi_loop ...
+INFO: [Pwropt 34-207] Design is in partially-placed state. Running in partially-placed mode.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.000 | TNS=-412.948 |
+PSMgr Creation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2478.594 ; gain = 128.238
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+Found 64542 new always-off flops by back propagation
+Pre-processing: Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 2657.859 ; gain = 307.504
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+IDT: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.928 . Memory (MB): peak = 2698.031 ; gain = 37.852
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Pwropt 34-215] Skipped ODC enables for 15585 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 36 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2783.906 ; gain = 85.875
+Power optimization passes: Time (s): cpu = 00:00:37 ; elapsed = 00:00:29 . Memory (MB): peak = 2783.906 ; gain = 433.551
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2783.906 ; gain = 0.000
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design hdmi_loop ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 3 BRAM(s) out of a total of 358 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+INFO: [Pwropt 34-100] Patcher adaptive clustering : original ram clusters 402 accepted clusters 402
+INFO: [Pwropt 34-100] Patcher adaptive clustering : original flop clusters 204 accepted clusters 204
+
+Number of Slice Registers augmented: 159 newly gated: 312 Total: 4686
+Number of SRLs augmented: 0  newly gated: 0 Total: 341
+Number of BRAM Ports augmented: 81 newly gated: 321 Total Ports: 716
+Number of Flops added for Enable Generation: 12
+
+Flops dropped: 12/498 RAMS dropped: 0/402 Clusters dropped: 4/606 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: 1590d7a81
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: 1590d7a81
+Power optimization: Time (s): cpu = 00:01:05 ; elapsed = 00:00:53 . Memory (MB): peak = 2783.906 ; gain = 1350.652
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 0 bytes
 
 Starting Logic Optimization Task
 
 Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-318] Generating core instance : dbg_hub
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
-INFO: [Netlist 29-17] Analyzing 1831 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1850 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1455.434 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 132fec3b1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 14b56eacc
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:01:14 . Memory (MB): peak = 1455.434 ; gain = 13.137
+Time (s): cpu = 00:00:04 ; elapsed = 00:01:13 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 2 Retarget
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 52 load pin(s).
+INFO: [Opt 31-138] Pushed 20 inverter(s) to 77 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 1783572fd
+Phase 2 Retarget | Checksum: 1dfa380b4
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:01:15 . Memory (MB): peak = 1455.434 ; gain = 13.137
-INFO: [Opt 31-389] Phase Retarget created 26 cells and removed 67 cells
+Time (s): cpu = 00:00:06 ; elapsed = 00:01:15 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 189 cells and removed 351 cells
 
-Phase 3 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 3 Constant propagation | Checksum: 1c4581557
+Phase 3 BUFG optimization
+Phase 3 BUFG optimization | Checksum: 1dfa380b4
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:01:16 . Memory (MB): peak = 1455.434 ; gain = 13.137
-INFO: [Opt 31-389] Phase Constant propagation created 3 cells and removed 35 cells
-
-Phase 4 Sweep
-Phase 4 Sweep | Checksum: 1ee14e723
-
-Time (s): cpu = 00:00:07 ; elapsed = 00:01:17 . Memory (MB): peak = 1455.434 ; gain = 13.137
-INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 717 cells
-
-Phase 5 BUFG optimization
-Phase 5 BUFG optimization | Checksum: 1ee14e723
-
-Time (s): cpu = 00:00:08 ; elapsed = 00:01:18 . Memory (MB): peak = 1455.434 ; gain = 13.137
+Time (s): cpu = 00:00:07 ; elapsed = 00:01:15 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
-Phase 6 Shift Register Optimization
-Phase 6 Shift Register Optimization | Checksum: 1ee14e723
+Phase 4 Remap
+Phase 4 Remap | Checksum: 14b2c50e1
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:01:18 . Memory (MB): peak = 1455.434 ; gain = 13.137
-INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Opt 31-389] Phase Remap created 1028 cells and removed 1472 cells
+Ending Logic Optimization Task | Checksum: 14b2c50e1
 
-Starting Connectivity Check Task
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1455.434 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 259a4ed93
-
-Time (s): cpu = 00:00:08 ; elapsed = 00:01:18 . Memory (MB): peak = 1455.434 ; gain = 13.137
-
-Starting Power Optimization Task
-INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out1_sys_pll' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:273]
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.433 | TNS=-900.333 |
-Running Vector-less Activity Propagation...
-
-Finished Running Vector-less Activity Propagation
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
-
-
-Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 184 BRAM(s) out of a total of 360 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 83 newly gated: 388 Total Ports: 720
-Number of Flops added for Enable Generation: 10
-
-Ending PowerOpt Patch Enables Task | Checksum: 15684523e
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 15684523e
-
-Time (s): cpu = 00:01:30 ; elapsed = 00:01:17 . Memory (MB): peak = 2813.832 ; gain = 1358.398
-
-Starting Logic Optimization Task
-INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out1_sys_pll' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:273]
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-
-Phase 1 Remap
-Phase 1 Remap | Checksum: 11072b644
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Opt 31-389] Phase Remap created 76 cells and removed 152 cells
-Ending Logic Optimization Task | Checksum: 11072b644
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-54 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-opt_design completed successfully
-opt_design: Time (s): cpu = 00:01:46 ; elapsed = 00:02:41 . Memory (MB): peak = 2813.832 ; gain = 1378.375
+53 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+power_opt_design: Time (s): cpu = 00:01:19 ; elapsed = 00:02:15 . Memory (MB): peak = 2783.906 ; gain = 1350.809
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop_opt.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_drc -file hdmi_loop_drc_opted.rpt -pb hdmi_loop_drc_opted.pb -rpx hdmi_loop_drc_opted.rpx
-Command: report_drc -file hdmi_loop_drc_opted.rpt -pb hdmi_loop_drc_opted.pb -rpx hdmi_loop_drc_opted.rpx
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop_drc_opted.rpt.
-report_drc completed successfully
-Command: power_opt_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
-INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out1_sys_pll' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:273]
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Begin power optimizations | Checksum: 138adcf1e
-INFO: [Pwropt 34-50] Optimizing power for module hdmi_loop ...
-INFO: [Pwropt 34-207] Design is in partially-placed state. Running in partially-placed mode.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.433 | TNS=-900.333 |
-PSMgr Creation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Running Vector-less Activity Propagation...
-
-Finished Running Vector-less Activity Propagation
-INFO: [Pwropt 34-54] Flop output of dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg does not fanout to any other flop but itself
-INFO: [Pwropt 34-54] Flop output of dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_reg[0] does not fanout to any other flop but itself
-INFO: [Pwropt 34-54] Flop output of dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_reg[1] does not fanout to any other flop but itself
-INFO: [Pwropt 34-54] Flop output of dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_reg[2] does not fanout to any other flop but itself
-INFO: [Pwropt 34-54] Flop output of dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/bscanid_reg[1] does not fanout to any other flop but itself
-Found 15036 new always-off flops by back propagation
-Pre-processing: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-IDT: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Pwropt 34-215] Skipped ODC enables for 5028 nets in BRAM flops in bus-based analysis.
-INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
-ODC: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Power optimization passes: Time (s): cpu = 00:00:26 ; elapsed = 00:00:13 . Memory (MB): peak = 2813.832 ; gain = 0.000
-
-INFO: [Pwropt 34-77] Creating clock enable groups ...
-INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
- Done
-Grouping enables: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.832 ; gain = 0.000
-
-
-Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-26] Patching clock gating enable signals for design hdmi_loop ...
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 360 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-INFO: [Pwropt 34-100] Patcher adaptive clustering : original ram clusters 155 accepted clusters 155
-INFO: [Pwropt 34-100] Patcher adaptive clustering : original flop clusters 237 accepted clusters 237
-
-Number of Slice Registers augmented: 155 newly gated: 183 Total: 5307
-Number of SRLs augmented: 0  newly gated: 0 Total: 490
-Number of BRAM Ports augmented: 24 newly gated: 131 Total Ports: 720
-Number of Flops added for Enable Generation: 0
-
-Flops dropped: 32/497 RAMS dropped: 0/155 Clusters dropped: 23/392 Enables dropped: 5
-Patching clock gating enables finished successfully.
-Ending PowerOpt Patch Enables Task | Checksum: 1a1e7d377
-
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Pwropt 34-30] Power optimization finished successfully.
-End power optimizations | Checksum: 1a1e7d377
-Power optimization: Time (s): cpu = 00:00:47 ; elapsed = 00:00:28 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 0 bytes
-
-Starting Logic Optimization Task
-
-Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 19 inverter(s) to 19 load pin(s).
-INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 22898c801
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 155 cells and removed 267 cells
-
-Phase 2 BUFG optimization
-Phase 2 BUFG optimization | Checksum: 22898c801
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
-
-Phase 3 Remap
-Phase 3 Remap | Checksum: 1b224a234
-
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Opt 31-389] Phase Remap created 906 cells and removed 1257 cells
-Ending Logic Optimization Task | Checksum: 1b224a234
-
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Common 17-83] Releasing license: Implementation
-89 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-power_opt_design completed successfully
-power_opt_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:37 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop_pwropt.dcp' has been generated.
 INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design
@@ -327,94 +212,94 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: be810174
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: bc047941
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out1_sys_pll' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:273]
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out1_sys_pll' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:273]
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 80ff39e5
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 10f108c18
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 12372b357
+Phase 1.3 Build Placer Netlist Model | Checksum: 209a564e7
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 12372b357
+Phase 1.4 Constrain Clocks/Macros | Checksum: 209a564e7
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 12372b357
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 209a564e7
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 13dc5b270
+Phase 2 Global Placement | Checksum: 135c7c379
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:33 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:28 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 13dc5b270
+Phase 3.1 Commit Multi Column Macros | Checksum: 135c7c379
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:34 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:28 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: f02080c6
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1de0404e8
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:38 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 143b9ef7b
+Phase 3.3 Area Swap Optimization | Checksum: 27f1baa1d
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:38 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: c5e599f8
+Phase 3.4 Pipeline Register Optimization | Checksum: 1a8de8134
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:38 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: c5e599f8
+Phase 3.5 Timing Path Optimizer | Checksum: 1a8de8134
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:39 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: d6996e86
+Phase 3.6 Fast Optimization | Checksum: 1880bb754
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:40 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:34 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 13e709c35
+Phase 3.7 Small Shape Detail Placement | Checksum: 194dd29c0
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:43 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:37 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: cabae273
+Phase 3.8 Re-assign LUT pins | Checksum: 127891149
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:44 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:37 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 12bf107c2
+Phase 3.9 Pipeline Register Optimization | Checksum: 16b1d8742
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:44 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:38 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: b18f08a6
+Phase 3.10 Fast Optimization | Checksum: 19e098be1
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:47 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: b18f08a6
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:40 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 19e098be1
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:47 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:41 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -423,58 +308,59 @@ INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as o
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 9f843d49
+Post Placement Optimization Initialization | Checksum: 1a96b00e0
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 9f843d49
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1a96b00e0
 
-Time (s): cpu = 00:01:19 ; elapsed = 00:00:53 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-5.965. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 12c8d37e4
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:46 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-5.549. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 13ccab7ec
 
-Time (s): cpu = 00:01:31 ; elapsed = 00:01:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 12c8d37e4
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:56 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 13ccab7ec
 
-Time (s): cpu = 00:01:31 ; elapsed = 00:01:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:56 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 12c8d37e4
+Phase 4.2 Post Placement Cleanup | Checksum: 13ccab7ec
 
-Time (s): cpu = 00:01:32 ; elapsed = 00:01:03 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:56 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 12c8d37e4
+Phase 4.3 Placer Reporting | Checksum: 13ccab7ec
 
-Time (s): cpu = 00:01:32 ; elapsed = 00:01:03 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:57 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 187860e1c
+Phase 4.4 Final Placement Cleanup | Checksum: 1445793ad
 
-Time (s): cpu = 00:01:32 ; elapsed = 00:01:03 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 187860e1c
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:57 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1445793ad
 
-Time (s): cpu = 00:01:32 ; elapsed = 00:01:03 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Ending Placer Task | Checksum: 102ae3bd5
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:57 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Ending Placer Task | Checksum: 1415629e5
 
-Time (s): cpu = 00:01:32 ; elapsed = 00:01:03 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:57 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-110 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:36 ; elapsed = 00:01:06 . Memory (MB): peak = 2813.832 ; gain = 0.000
+place_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:00 . Memory (MB): peak = 2783.906 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file hdmi_loop_io_placed.rpt
-report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.252 . Memory (MB): peak = 2813.832 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.154 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_loop_utilization_placed.rpt -pb hdmi_loop_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.315 . Memory (MB): peak = 2813.832 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.259 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file hdmi_loop_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2813.832 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2783.906 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
@@ -486,115 +372,119 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 4865f483 ConstDB: 0 ShapeSum: ba484752 RouteDB: 0
+Checksum: PlaceDB: dc3bd084 ConstDB: 0 ShapeSum: 651a5961 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 7563b11c
+Phase 1 Build RT Design | Checksum: 5297d75c
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:32 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 4fe2109b NumContArr: 2581a081 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:28 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 46655700 NumContArr: c32805c Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 7563b11c
+Phase 2.1 Create Timer | Checksum: 5297d75c
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 7563b11c
+Phase 2.2 Fix Topology Constraints | Checksum: 5297d75c
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 7563b11c
+Phase 2.3 Pre Route Cleanup | Checksum: 5297d75c
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2783.906 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 2baf7a314
+Phase 2.4 Update Timing | Checksum: 278c74d9b
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:40 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.971 | TNS=-1301.635| WHS=-0.315 | THS=-291.911|
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:36 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.601 | TNS=-597.250| WHS=-0.346 | THS=-293.184|
 
-Phase 2 Router Initialization | Checksum: 2be573bd8
+Phase 2 Router Initialization | Checksum: 22b11d132
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:42 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:38 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1b67df49a
+Phase 3 Initial Routing | Checksum: 18fd249ec
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:01:23 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:00 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1465
- Number of Nodes with overlaps = 157
+ Number of Nodes with overlaps = 1771
+ Number of Nodes with overlaps = 204
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.002 | TNS=-3352.717| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.677 | TNS=-1403.797| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 17a661e41
+Phase 4.1 Global Iteration 0 | Checksum: 1476b73a1
 
-Time (s): cpu = 00:02:56 ; elapsed = 00:01:47 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:17 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.002 | TNS=-3339.824| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.677 | TNS=-1395.917| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 1cc540c22
+Phase 4.2 Global Iteration 1 | Checksum: 1a8f14cff
 
-Time (s): cpu = 00:02:57 ; elapsed = 00:01:48 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: 1cc540c22
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:18 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 1a8f14cff
 
-Time (s): cpu = 00:02:57 ; elapsed = 00:01:48 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:18 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 18f95d712
+Phase 5.1.1 Update Timing | Checksum: 14a0cd723
 
-Time (s): cpu = 00:02:59 ; elapsed = 00:01:49 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.002 | TNS=-3325.757| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:19 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.677 | TNS=-1389.247| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 1e9d01d22
+Phase 5.1 Delay CleanUp | Checksum: e8d96883
 
-Time (s): cpu = 00:03:22 ; elapsed = 00:02:00 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:31 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1e9d01d22
+Phase 5.2 Clock Skew Optimization | Checksum: e8d96883
 
-Time (s): cpu = 00:03:22 ; elapsed = 00:02:00 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 1e9d01d22
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:31 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: e8d96883
 
-Time (s): cpu = 00:03:22 ; elapsed = 00:02:01 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:31 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 16c1fba22
+Phase 6.1.1 Update Timing | Checksum: 1523d3eeb
 
-Time (s): cpu = 00:03:24 ; elapsed = 00:02:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.002 | TNS=-3278.939| WHS=-0.962 | THS=-12.055|
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.674 | TNS=-1340.749| WHS=-0.962 | THS=-12.023|
 
-Phase 6.1 Hold Fix Iter | Checksum: 15257605c
+Phase 6.1 Hold Fix Iter | Checksum: 14f47e744
 
-Time (s): cpu = 00:03:25 ; elapsed = 00:02:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: 168f1dade
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 12156013c
 
-Time (s): cpu = 00:03:25 ; elapsed = 00:02:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.04002 %
-  Global Horizontal Routing Utilization  = 2.20086 %
+  Global Vertical Routing Utilization    = 2.67827 %
+  Global Horizontal Routing Utilization  = 2.69335 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -605,54 +495,55 @@ Router Utilization Summary
 
 Utilization threshold used for congestion level computation: 0.85
 Congestion Report
-North Dir 1x1 Area, Max Cong = 70.2703%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 54.955%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 55.8824%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 57.3529%, No Congested Regions.
-Phase 7 Route finalize | Checksum: 10609f9d0
+North Dir 1x1 Area, Max Cong = 57.6577%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 62.1622%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 75%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 69.1176%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 17c44c868
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 10609f9d0
+Phase 8 Verifying routed nets | Checksum: 17c44c868
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:32 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 15dee80e9
+Phase 9 Depositing Routes | Checksum: 1cadf0a55
 
-Time (s): cpu = 00:03:27 ; elapsed = 00:02:04 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:34 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Phase 10 Post Router Timing
 
 Phase 10.1 Update Timing
-Phase 10.1 Update Timing | Checksum: 2191fadd2
+Phase 10.1 Update Timing | Checksum: 24f82854a
 
-Time (s): cpu = 00:03:29 ; elapsed = 00:02:05 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-6.002 | TNS=-3278.939| WHS=0.052  | THS=0.000  |
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:35 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.674 | TNS=-1340.749| WHS=0.063  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 2191fadd2
+Phase 10 Post Router Timing | Checksum: 24f82854a
 
-Time (s): cpu = 00:03:29 ; elapsed = 00:02:05 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:35 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:03:29 ; elapsed = 00:02:05 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:35 . Memory (MB): peak = 2783.906 ; gain = 0.000
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-127 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:03:34 ; elapsed = 00:02:08 . Memory (MB): peak = 2813.832 ; gain = 0.000
+route_design: Time (s): cpu = 00:02:37 ; elapsed = 00:01:38 . Memory (MB): peak = 2783.906 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2813.832 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file hdmi_loop_drc_routed.rpt -pb hdmi_loop_drc_routed.pb -rpx hdmi_loop_drc_routed.rpx
 Command: report_drc -file hdmi_loop_drc_routed.rpt -pb hdmi_loop_drc_routed.pb -rpx hdmi_loop_drc_routed.rpx
 INFO: [DRC 23-27] Running DRC with 2 threads
@@ -667,7 +558,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2813.832 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file hdmi_loop_power_routed.rpt -pb hdmi_loop_power_summary_routed.pb -rpx hdmi_loop_power_routed.rpx
 Command: report_power -file hdmi_loop_power_routed.rpt -pb hdmi_loop_power_summary_routed.pb -rpx hdmi_loop_power_routed.rpx
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out1_sys_pll' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/Yi/Desktop/FPGA/08_4_hdmi_loop/hdmi_loop.srcs/constrs_1/new/hdmi_loop.xdc:273]
@@ -675,9 +566,9 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-141 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+106 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2813.832 ; gain = 0.000
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2783.906 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_route_status -file hdmi_loop_route_status.rpt -pb hdmi_loop_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file hdmi_loop_timing_summary_routed.rpt -rpx hdmi_loop_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
@@ -686,7 +577,7 @@ CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requireme
 INFO: [runtcl-4] Executing : report_incremental_reuse -file hdmi_loop_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
 INFO: [runtcl-4] Executing : report_clock_utilization -file hdmi_loop_clock_utilization_routed.rpt
-report_clock_utilization: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2813.832 ; gain = 0.000
+report_clock_utilization: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2783.906 ; gain = 0.000
 Command: write_bitstream -force hdmi_loop.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
@@ -728,6 +619,7 @@ WARNING: [DRC DPOP-1] PREG Output pipelining: DSP overlay_m1/color_g_temp1 outpu
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP overlay_m1/color_g_temp1__0 output overlay_m1/color_g_temp1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP plot_m1/addrb1 output plot_m1/addrb1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP plot_m1/distance_sq output plot_m1/distance_sq/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP plot_m1/distance_sq0 output plot_m1/distance_sq0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP overlay_m1/color_b_temp1 multiplier stage overlay_m1/color_b_temp1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP overlay_m1/color_b_temp1__0 multiplier stage overlay_m1/color_b_temp1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP overlay_m1/color_g_temp1 multiplier stage overlay_m1/color_g_temp1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
@@ -735,54 +627,31 @@ WARNING: [DRC DPOP-2] MREG Output pipelining: DSP overlay_m1/color_g_temp1__0 mu
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP overlay_m1/color_r_temp1 multiplier stage overlay_m1/color_r_temp1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP plot_m1/addrb1 multiplier stage plot_m1/addrb1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP plot_m1/distance_sq multiplier stage plot_m1/distance_sq/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[0]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[10]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[11]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[1]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[2]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[3]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[4]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[5]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[6]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[7]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[8]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_x_d0_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_x_d0_reg[9]_LDC_i_1/O, cell overlay_m1/mouse_x_d0_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[0]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[10]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[11]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[1]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[2]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[3]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[4]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[5]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[6]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[7]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[8]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net overlay_m1/mouse_y_d0_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin overlay_m1/mouse_y_d0_reg[9]_LDC_i_1/O, cell overlay_m1/mouse_y_d0_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][0]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][0]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][10]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][10]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][11]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][11]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][1]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][1]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][2]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][2]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][3]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][3]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][4]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][4]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][5]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][5]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][6]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][6]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][7]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][7]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][8]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][8]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/x_reg[0][9]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/x_reg[0][9]_LDC_i_1/O, cell reset_power_on_m0/x_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][0]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][0]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][10]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][10]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][11]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][11]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][1]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][1]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][2]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][2]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][3]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][3]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][4]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][4]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][5]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][5]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][6]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][6]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][7]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][7]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][8]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][8]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net reset_power_on_m0/y_reg[0][9]_P is a gated clock net sourced by a combinational pin reset_power_on_m0/y_reg[0][9]_LDC_i_1/O, cell reset_power_on_m0/y_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP plot_m1/distance_sq0 multiplier stage plot_m1/distance_sq0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][0]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][0]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][10]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][10]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][11]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][11]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][1]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][1]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][2]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][2]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][3]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][3]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][4]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][4]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][5]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][5]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][6]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][6]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][7]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][7]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][8]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][8]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/x_reg[0][9]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/x_reg[0][9]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/x_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][0]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][0]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][10]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][10]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][11]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][11]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][1]_P is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][1]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][2]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][2]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][3]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][3]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][4]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][4]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][5]_P_1 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][5]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][6]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][6]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][7]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][7]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][8]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][8]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net plot_m1/scale_p/simu_p/y_reg[0][9]_P_0 is a gated clock net sourced by a combinational pin plot_m1/scale_p/simu_p/y_reg[0][9]_LDC_i_1/O, cell plot_m1/scale_p/simu_p/y_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRARDADDR[0] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[0]) which is driven by a register (plot_m1/addra_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRARDADDR[10] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[10]) which is driven by a register (plot_m1/addra_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B has an input control pin plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B/ADDRARDADDR[11] (net: plot_m1/plot/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[11]) which is driven by a register (plot_m1/addra_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -823,9 +692,9 @@ WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 overlay_m1/bra
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRARDADDR[7] (net: overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[2]) which is driven by a register (overlay_m1/display_a_addr_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRARDADDR[8] (net: overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[3]) which is driven by a register (overlay_m1/display_a_addr_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRARDADDR[9] (net: overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[4]) which is driven by a register (overlay_m1/display_a_addr_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC RTSTAT-10] No routable loads: 21 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, overlay_m1/ila_0_inst/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], overlay_m1/ila_0_inst/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14], overlay_m1/ila_0_inst/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[15], overlay_m1/ila_0_inst/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[16]... and (the first 15 of 19 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 2030 net(s) have no routable loads. The problem bus(es) and/or net(s) are uart_rs_inst/D1_START_X_reg[3]_i_2_n_1, uart_rs_inst/D1_START_X_reg[3]_i_2_n_2, uart_rs_inst/D1_START_X_reg[3]_i_2_n_3, uart_rs_inst/D1_START_X_reg[7]_i_2_n_1, uart_rs_inst/D1_START_X_reg[7]_i_2_n_2, uart_rs_inst/D1_START_X_reg[7]_i_2_n_3, uart_rs_inst/D1_START_X_reg[11]_i_2_n_1, uart_rs_inst/D1_START_X_reg[11]_i_2_n_2, uart_rs_inst/D1_START_X_reg[11]_i_2_n_3, uart_rs_inst/D1_START_X_reg[15]_i_2_n_1, uart_rs_inst/D1_START_X_reg[15]_i_2_n_2, uart_rs_inst/D1_START_X_reg[15]_i_2_n_3, uart_rs_inst/D1_START_Y_reg[3]_i_2_n_1, uart_rs_inst/D1_START_Y_reg[3]_i_2_n_2, uart_rs_inst/D1_START_Y_reg[3]_i_2_n_3... and (the first 15 of 2005 listed).
 INFO: [DRC REQP-165] writefirst: Synchronous clocking is detected for BRAM (overlay_m1/bram_display_b_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 124 Warnings, 1 Advisories
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 102 Warnings, 1 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
@@ -839,7 +708,7 @@ Writing bitstream ./hdmi_loop.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
 INFO: [Common 17-83] Releasing license: Implementation
-158 Infos, 172 Warnings, 1 Critical Warnings and 0 Errors encountered.
+123 Infos, 148 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:01:29 ; elapsed = 00:00:56 . Memory (MB): peak = 2813.832 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Sep  1 16:03:47 2023...
+write_bitstream: Time (s): cpu = 00:01:16 ; elapsed = 00:00:49 . Memory (MB): peak = 2783.906 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Sep  4 17:12:16 2023...

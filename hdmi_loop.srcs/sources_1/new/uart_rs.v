@@ -50,6 +50,7 @@ reg[7:0]                        signal_reg;
 reg[31:0]                       value_reg;
 reg[7:0]                        instruct[4:0];
 reg[7:0]                        instruct_cnt = 8'd0;
+reg[7:0]                        send_cnt = 8'd0;
 
 assign signal = signal_reg;
 assign value = value_reg;
@@ -80,15 +81,20 @@ begin
 		WAIT:
 		begin
 			wait_cnt <= wait_cnt + 32'd1;
-			if(rx_data_valid == 1'b1) begin
+			if (instruct_cnt == 8'd5) begin
+				if (send_cnt == 8'd5) begin
+					instruct_cnt <= 8'd0;
+					send_cnt <= 8'd0;
+				end else begin
+					send_cnt <= send_cnt + 1;
+				end
+				signal_reg <= instruct[0];
+				value_reg <= {instruct[1], instruct[2], instruct[3], instruct[4]};
+			end else if(rx_data_valid == 1'b1) begin
 				instruct[instruct_cnt] = rx_data;
 				instruct_cnt = instruct_cnt + 8'd1;
 			    signal_reg <= 8'd0;
                 value_reg <= 32'd0;
-			end else if (instruct_cnt == 8'd5) begin
-			    instruct_cnt = 8'd0;
-			    signal_reg <= instruct[0];
-			    value_reg <= {instruct[1], instruct[2], instruct[3], instruct[4]};
 			end else begin
 			    signal_reg <= 8'd0;
                 value_reg <= 32'd0;
